@@ -96,3 +96,4 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 Docs/INTERNAL_CONTRIBUTING.md
+Assets/StreamingAssets/api_key.txt
