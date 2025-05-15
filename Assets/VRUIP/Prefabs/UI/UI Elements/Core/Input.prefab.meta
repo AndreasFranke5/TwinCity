@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3add99c9d4f2fcd47b4f98f765901b45
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 249282
+  packageName: VR UI Package
+  packageVersion: 1.1
+  assetPath: Assets/VRUIP/Prefabs/UI/UI Elements/Core/Input.prefab
+  uploadId: 660859

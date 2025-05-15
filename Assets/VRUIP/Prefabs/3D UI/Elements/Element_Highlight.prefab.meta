@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 624d641121d879c4b8b5fc4d87cfbd36
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 249282
+  packageName: VR UI Package
+  packageVersion: 1.1
+  assetPath: Assets/VRUIP/Prefabs/3D UI/Elements/Element_Highlight.prefab
+  uploadId: 660859

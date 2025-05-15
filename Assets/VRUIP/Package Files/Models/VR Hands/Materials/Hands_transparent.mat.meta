@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 944feb076639a4d39b750e3cb5d7dfab
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 249282
+  packageName: VR UI Package
+  packageVersion: 1.1
+  assetPath: Assets/VRUIP/Package Files/Models/VR Hands/Materials/Hands_transparent.mat
+  uploadId: 660859

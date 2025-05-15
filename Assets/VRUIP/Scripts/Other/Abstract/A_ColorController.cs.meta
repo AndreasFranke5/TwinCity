@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 870fbef9995043a43a511ceec8aa2aaf
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 249282
+  packageName: VR UI Package
+  packageVersion: 1.1
+  assetPath: Assets/VRUIP/Scripts/Other/Abstract/A_ColorController.cs
+  uploadId: 660859

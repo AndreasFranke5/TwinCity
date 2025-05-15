@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: faafb46b767dd7a4ebaadab3f916cf84
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 249282
+  packageName: VR UI Package
+  packageVersion: 1.1
+  assetPath: Assets/VRUIP/Prefabs/UI/UI Elements/Misc/Button_UniversalMenu.prefab
+  uploadId: 660859

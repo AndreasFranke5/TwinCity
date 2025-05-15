@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 9a09f7ad141bdca48bd559c946e8a4d3
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 249282
+  packageName: VR UI Package
+  packageVersion: 1.1
+  assetPath: Assets/VRUIP/Prefabs/UI/UI Elements/Other/Tabs/Tab Layout.prefab
+  uploadId: 660859
