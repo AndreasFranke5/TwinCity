@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4afa73cc6c99f1644a4d464e77c23c94
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 249282
+  packageName: VR UI Package
+  packageVersion: 1.1
+  assetPath: Assets/VRUIP/Prefabs/3D UI/Elements/Element_Rotating.prefab
+  uploadId: 660859

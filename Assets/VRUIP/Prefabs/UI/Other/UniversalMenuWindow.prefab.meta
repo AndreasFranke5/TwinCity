@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 96dbeada060517c4eb815b6492014c9c
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 249282
+  packageName: VR UI Package
+  packageVersion: 1.1
+  assetPath: Assets/VRUIP/Prefabs/UI/Other/UniversalMenuWindow.prefab
+  uploadId: 660859

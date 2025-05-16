@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: d9e145bf2c4a0444d879754afe725061
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 249282
+  packageName: VR UI Package
+  packageVersion: 1.1
+  assetPath: Assets/VRUIP/Package Files/Models/VR Hands/HandController.cs
+  uploadId: 660859

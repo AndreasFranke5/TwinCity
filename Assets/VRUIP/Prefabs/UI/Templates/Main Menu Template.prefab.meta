@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b6554ddcb33cdc54b8a1ffe84b85cf94
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 249282
+  packageName: VR UI Package
+  packageVersion: 1.1
+  assetPath: Assets/VRUIP/Prefabs/UI/Templates/Main Menu Template.prefab
+  uploadId: 660859

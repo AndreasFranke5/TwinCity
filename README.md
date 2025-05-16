@@ -55,7 +55,7 @@ This project was developed by a four-person team at SU to explore concepts of:
 - **Andreas** – Backend, Unity architecture, repo management  
 - **Eman** – UI/UX design, Figma mockups, portfolio materials
 - **Florian** – Lead Unity implementation, Cesium integration  
-- **Minhui** – Documentation, testing, and research
+- **Minhui** – Interaction design, XR design, Documentation, Testing, and Research
 
 ---
 

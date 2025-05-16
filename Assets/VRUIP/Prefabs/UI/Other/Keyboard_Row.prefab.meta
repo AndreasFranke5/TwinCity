@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 40228fced28b7d34eaffee2c8bed04e0
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 249282
+  packageName: VR UI Package
+  packageVersion: 1.1
+  assetPath: Assets/VRUIP/Prefabs/UI/Other/Keyboard_Row.prefab
+  uploadId: 660859

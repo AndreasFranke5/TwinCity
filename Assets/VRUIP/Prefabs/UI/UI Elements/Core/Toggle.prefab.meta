@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 24cc2501130f7d2499b5190c31d30782
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 249282
+  packageName: VR UI Package
+  packageVersion: 1.1
+  assetPath: Assets/VRUIP/Prefabs/UI/UI Elements/Core/Toggle.prefab
+  uploadId: 660859
