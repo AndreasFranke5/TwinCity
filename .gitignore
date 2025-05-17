@@ -97,3 +97,5 @@ crashlytics-build.properties
 
 Docs/INTERNAL_CONTRIBUTING.md
 Assets/StreamingAssets/api_key.txt
+Assets/StreamingAssets/api_key.txt.meta
+Assets/Scripts/Cesium/CesiumTokenConfig.asset
