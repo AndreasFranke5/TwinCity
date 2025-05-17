@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: f1ecf87985b58c840a9eabf3dd312bae
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 249282
+  packageName: VR UI Package
+  packageVersion: 1.1
+  assetPath: Assets/VRUIP/Scripts/Other/Editor/VRUIPMenu.cs
+  uploadId: 660859

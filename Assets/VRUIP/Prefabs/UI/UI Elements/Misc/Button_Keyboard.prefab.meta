@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3173c4912bdf0b24ca69a0c8f70ad7fe
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 249282
+  packageName: VR UI Package
+  packageVersion: 1.1
+  assetPath: Assets/VRUIP/Prefabs/UI/UI Elements/Misc/Button_Keyboard.prefab
+  uploadId: 660859

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4142c82e48d3c834f9685ca9f01608fa
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 249282
+  packageName: VR UI Package
+  packageVersion: 1.1
+  assetPath: Assets/VRUIP/Prefabs/UI/UI Elements/Misc/Scale_UI_Button.prefab
+  uploadId: 660859

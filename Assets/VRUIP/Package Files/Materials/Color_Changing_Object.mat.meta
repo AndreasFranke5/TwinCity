@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8a76751248d305248bcedcbc781b5565
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 249282
+  packageName: VR UI Package
+  packageVersion: 1.1
+  assetPath: Assets/VRUIP/Package Files/Materials/Color_Changing_Object.mat
+  uploadId: 660859

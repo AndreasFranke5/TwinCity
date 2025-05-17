@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: aedfd6772ad808c448805b9b5ddb35f5
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 249282
+  packageName: VR UI Package
+  packageVersion: 1.1
+  assetPath: Assets/VRUIP/Demo Scenes/DemoSceneOculus.unity
+  uploadId: 660859

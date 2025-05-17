@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ebc9962863a9c4be8b6db4454b8521b8
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 249282
+  packageName: VR UI Package
+  packageVersion: 1.1
+  assetPath: Assets/VRUIP/Prefabs/3D UI/3D Button/Button.prefab
+  uploadId: 660859
