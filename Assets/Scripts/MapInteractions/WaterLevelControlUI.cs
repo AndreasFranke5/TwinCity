@@ -3,25 +3,21 @@ using UnityEngine;
 public class WaterLevelControlUI : MonoBehaviour
 {
     [SerializeField] private MapSyncController mapSyncController;
-    [SerializeField] private float changeAmount = 0.5f;
+    [SerializeField] public float changeAmount = 0.01f;
 
-    // Called by UI button to increase water level
     public void IncreaseWaterLevel()
     {
         if (mapSyncController != null)
         {
-            float newLevel = mapSyncController.WaterLevel + changeAmount;
-            mapSyncController.RPC_RequestWaterLevel(newLevel);
+            mapSyncController.RPC_IncreaseWaterLevel(changeAmount);
         }
     }
 
-    // Called by UI button to decrease water level
     public void DecreaseWaterLevel()
     {
         if (mapSyncController != null)
         {
-            float newLevel = mapSyncController.WaterLevel - changeAmount;
-            mapSyncController.RPC_RequestWaterLevel(newLevel);
+            mapSyncController.RPC_DecreaseWaterLevel(changeAmount);
         }
     }
 }
