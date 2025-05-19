@@ -5,6 +5,7 @@ public class MapSyncController : NetworkBehaviour
 {
     [SerializeField] private Transform rotatableMapBase;
     [SerializeField] private Transform waterPlane;
+    [SerializeField] private Transform mapModel;
 
     [Networked] public float MapRotation { get; set; }
     [Networked] public float WaterLevel { get; set; }
@@ -13,6 +14,11 @@ public class MapSyncController : NetworkBehaviour
 
     public override void Spawned()
     {
+        if (rotatableMapBase != null && waterPlane != null)
+        {
+            WaterLevel = waterPlane.position.y - rotatableMapBase.position.y;
+        }
+
         _changeDetector = GetChangeDetector(ChangeDetector.Source.SimulationState);
     }
 
@@ -44,9 +50,9 @@ public class MapSyncController : NetworkBehaviour
 
     private void ApplyRotation()
     {
-        if (waterPlane != null)
+        if (mapModel != null)
         {
-            waterPlane.localRotation = Quaternion.Euler(0f, MapRotation, 0f);
+            mapModel.localRotation = Quaternion.Euler(0f, MapRotation, 0f);
         }
     }
 
@@ -59,10 +65,23 @@ public class MapSyncController : NetworkBehaviour
         }
     }
 
+
     // Clients can still request water level change if needed
     [Rpc(RpcSources.All, RpcTargets.StateAuthority)]
     public void RPC_RequestWaterLevel(float level)
     {
         WaterLevel = level;
+    }
+
+    [Rpc(RpcSources.All, RpcTargets.StateAuthority)]
+    public void RPC_IncreaseWaterLevel(float amount)
+    {
+        WaterLevel += amount;
+    }
+
+    [Rpc(RpcSources.All, RpcTargets.StateAuthority)]
+    public void RPC_DecreaseWaterLevel(float amount)
+    {
+        WaterLevel -= amount;
     }
 }
