@@ -6,13 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
+    path: "Assets/Samples/Meta XR Interaction \u200BSDK/Scenes/SampleScene.unity"
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 0
-    path: Assets/Scenes/MRTestScene.unity
+    path: "Assets/Samples/Meta XR Interaction \u200BSDK/Scenes/MRTestScene.unity"
     guid: 6ff401694c851454da4fb33098af59e1
   - enabled: 1
-    path: Assets/Scenes/MRMultiplayerTestScene.unity
+    path: "Assets/Samples/Meta XR Interaction \u200BSDK/Scenes/MRMultiplayerTestScene.unity"
     guid: 81bc5f3b86b716644856432c8da90da5
   - enabled: 0
     path: Assets/VRUIP/Demo Scenes/DemoSceneMetaSDK.unity
