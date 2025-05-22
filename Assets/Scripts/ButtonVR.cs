@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using Quaternion = UnityEngine.Quaternion;
 using Vector3 = UnityEngine.Vector3;
+
 public class ButtonVR : MonoBehaviour
 {
     public GameObject button;
@@ -20,7 +21,7 @@ public class ButtonVR : MonoBehaviour
 
     public GameObject pointerPrefab;
 
-    private static readonly Vector3 SpawnPosition = new Vector3(0,0,0);
+    private static readonly Vector3 SpawnPosition = new Vector3(0, 0, 0);
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -43,7 +44,7 @@ public class ButtonVR : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other == presser)
+        if (other.gameObject == presser)
         {
             button.transform.localPosition = new Vector3(0, 0.015f, 0);
             onRelease.Invoke();
@@ -51,8 +52,9 @@ public class ButtonVR : MonoBehaviour
         }
 
     }
+
     public void SpawnPointer()
     {
-        Instantiate(pointerPrefab,SpawnPosition,Quaternion.identity);
+        Instantiate(pointerPrefab, SpawnPosition, Quaternion.identity);
     }
 }
