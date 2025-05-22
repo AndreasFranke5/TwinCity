@@ -1,12 +1,14 @@
 using UnityEngine;
 using Quaternion = UnityEngine.Quaternion;
-
+using Vector3 = UnityEngine.Vector3;
 
 public class spawn_pointer : MonoBehaviour
 {
-    public GameObject pointer;
+    public GameObject pointerPrefab;
 
     public Transform spawnPoint;
+
+    private static readonly Vector3 SpawnPosition = new Vector3(0,0,0);
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,6 +24,6 @@ public class spawn_pointer : MonoBehaviour
 
     public void SpawnPointer()
     {
-        Instantiate(pointer, spawnPoint.position, Quaternion.identity);
+        Instantiate(pointerPrefab,SpawnPosition,Quaternion.identity);
     }
 }
