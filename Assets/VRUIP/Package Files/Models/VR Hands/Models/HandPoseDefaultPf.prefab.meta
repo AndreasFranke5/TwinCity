@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 35525acb4c3b75c4a8c4dc2c117427be
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 249282
+  packageName: VR UI Package
+  packageVersion: 1.1
+  assetPath: Assets/VRUIP/Package Files/Models/VR Hands/Models/HandPoseDefaultPf.prefab
+  uploadId: 660859

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 130a4657bc96e504b886cbed34094d11
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 249282
+  packageName: VR UI Package
+  packageVersion: 1.1
+  assetPath: Assets/VRUIP/Prefabs/Tools/Camera/Picture.prefab
+  uploadId: 660859

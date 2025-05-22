@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e9da3082c033d40459e23c97e346c342
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 249282
+  packageName: VR UI Package
+  packageVersion: 1.1
+  assetPath: Assets/VRUIP/Package Files/Materials/Metal_Wall.mat
+  uploadId: 660859

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: fb27409062a443f4998f548fca7d04da
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 249282
+  packageName: VR UI Package
+  packageVersion: 1.1
+  assetPath: Assets/VRUIP/Prefabs/3D UI/Elements/Element_Pop.prefab
+  uploadId: 660859

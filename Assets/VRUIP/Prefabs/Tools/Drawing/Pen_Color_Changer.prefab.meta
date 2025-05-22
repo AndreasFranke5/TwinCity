@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0a023c90167622c4dbe0331b633bcc53
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 249282
+  packageName: VR UI Package
+  packageVersion: 1.1
+  assetPath: Assets/VRUIP/Prefabs/Tools/Drawing/Pen_Color_Changer.prefab
+  uploadId: 660859

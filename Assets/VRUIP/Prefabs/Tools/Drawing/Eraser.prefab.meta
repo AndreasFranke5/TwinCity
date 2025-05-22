@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 9bb340c1043c2674a951265fa559abd4
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 249282
+  packageName: VR UI Package
+  packageVersion: 1.1
+  assetPath: Assets/VRUIP/Prefabs/Tools/Drawing/Eraser.prefab
+  uploadId: 660859

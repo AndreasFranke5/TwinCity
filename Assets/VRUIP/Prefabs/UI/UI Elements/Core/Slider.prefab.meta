@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 103c89d16086491499da71e3d1b99594
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 249282
+  packageName: VR UI Package
+  packageVersion: 1.1
+  assetPath: Assets/VRUIP/Prefabs/UI/UI Elements/Core/Slider.prefab
+  uploadId: 660859

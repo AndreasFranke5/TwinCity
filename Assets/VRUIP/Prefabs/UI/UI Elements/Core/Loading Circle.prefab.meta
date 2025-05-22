@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 608002320ae01ea4fbeff47bd94525a2
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 249282
+  packageName: VR UI Package
+  packageVersion: 1.1
+  assetPath: Assets/VRUIP/Prefabs/UI/UI Elements/Core/Loading Circle.prefab
+  uploadId: 660859

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: ab1d8e6105d05f24095ddb8b61c924fb
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 249282
+  packageName: VR UI Package
+  packageVersion: 1.1
+  assetPath: Assets/VRUIP/Scripts/Other/Editor/GrabbableEditor.cs
+  uploadId: 660859

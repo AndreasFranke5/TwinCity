@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ef0a527a8731bc8438dd5e549a278f21
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 249282
+  packageName: VR UI Package
+  packageVersion: 1.1
+  assetPath: Assets/VRUIP/Prefabs/UI/UI Elements/Core/Icon.prefab
+  uploadId: 660859

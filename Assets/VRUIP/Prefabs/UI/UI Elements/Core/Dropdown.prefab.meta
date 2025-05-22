@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a8c86962a86115c41924cf766b51636c
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 249282
+  packageName: VR UI Package
+  packageVersion: 1.1
+  assetPath: Assets/VRUIP/Prefabs/UI/UI Elements/Core/Dropdown.prefab
+  uploadId: 660859

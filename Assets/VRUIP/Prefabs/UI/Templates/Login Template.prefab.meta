@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1caab6790b5e6154fa43dcde845f668f
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 249282
+  packageName: VR UI Package
+  packageVersion: 1.1
+  assetPath: Assets/VRUIP/Prefabs/UI/Templates/Login Template.prefab
+  uploadId: 660859

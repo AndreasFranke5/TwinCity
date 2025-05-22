@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1bb289325a92650439163c9fd8da8765
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 249282
+  packageName: VR UI Package
+  packageVersion: 1.1
+  assetPath: Assets/VRUIP/Prefabs/Tools/Drawing/Color Palette.prefab
+  uploadId: 660859
