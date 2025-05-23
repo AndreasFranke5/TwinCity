@@ -31977,7 +31977,7 @@ MonoBehaviour:
   mapLayer:
     serializedVersion: 2
     m_Bits: 1
-  rayMaterial: {fileID: 2100000, guid: 2b98de655f782074e9b125c969746467, type: 2}
+  rayMaterial: {fileID: 2100000, guid: c813572299db83743aa50a80a0e562d2, type: 2}
   rayWidth: 0.02
 --- !u!120 &1695742951
 LineRenderer:
@@ -31988,7 +31988,7 @@ LineRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1695742942}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
