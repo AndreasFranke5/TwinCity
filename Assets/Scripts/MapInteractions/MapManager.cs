@@ -10,49 +10,35 @@ public class MapSyncController : NetworkBehaviour
     [Networked] public float MapRotation { get; set; }
     [Networked] public float WaterLevel { get; set; }
 
-    private ChangeDetector _changeDetector;
-
     public override void Spawned()
     {
-        if (rotatableMapBase != null && waterPlane != null)
+        if (HasStateAuthority && rotatableMapBase != null && waterPlane != null)
         {
             WaterLevel = waterPlane.position.y - rotatableMapBase.position.y;
         }
 
-        _changeDetector = GetChangeDetector(ChangeDetector.Source.SimulationState);
+        ApplyWaterLevel();
     }
 
     public override void FixedUpdateNetwork()
     {
         if (HasStateAuthority && rotatableMapBase != null)
         {
-            // Read the Y-axis rotation of the base and write it to the networked variable
-            float currentYRotation = rotatableMapBase.localEulerAngles.y;
-            MapRotation = currentYRotation;
+            // Sync current rotation each tick
+            MapRotation = rotatableMapBase.localEulerAngles.y;
         }
     }
 
     public override void Render()
     {
-        foreach (var property in _changeDetector.DetectChanges(this))
-        {
-            switch (property)
-            {
-                case nameof(MapRotation):
-                    ApplyRotation();
-                    break;
-                case nameof(WaterLevel):
-                    ApplyWaterLevel();
-                    break;
-            }
-        }
-    }
-
-    private void ApplyRotation()
-    {
         if (mapModel != null)
         {
-            mapModel.localRotation = Quaternion.Euler(0f, MapRotation, 0f);
+            var interpolator = new NetworkBehaviourBufferInterpolator(this);
+            if (interpolator.Valid)
+            {
+                float interpolatedYRotation = interpolator.Float(nameof(MapRotation));
+                mapModel.localRotation = Quaternion.Euler(0f, interpolatedYRotation, 0f);
+            }
         }
     }
 
@@ -65,23 +51,25 @@ public class MapSyncController : NetworkBehaviour
         }
     }
 
-
-    // Clients can still request water level change if needed
+    // Optional water level RPCs
     [Rpc(RpcSources.All, RpcTargets.StateAuthority)]
     public void RPC_RequestWaterLevel(float level)
     {
         WaterLevel = level;
+        ApplyWaterLevel();
     }
 
     [Rpc(RpcSources.All, RpcTargets.StateAuthority)]
     public void RPC_IncreaseWaterLevel(float amount)
     {
         WaterLevel += amount;
+        ApplyWaterLevel();
     }
 
     [Rpc(RpcSources.All, RpcTargets.StateAuthority)]
     public void RPC_DecreaseWaterLevel(float amount)
     {
         WaterLevel -= amount;
+        ApplyWaterLevel();
     }
 }
