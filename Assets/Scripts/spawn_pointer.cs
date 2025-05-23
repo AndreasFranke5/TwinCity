@@ -25,5 +25,7 @@ public class spawn_pointer : MonoBehaviour
     public void SpawnPointer()
     {
         Instantiate(pointerPrefab,SpawnPosition,Quaternion.identity);
+                   Debug.Log("Prefab not assigned!");
+
     }
 }
