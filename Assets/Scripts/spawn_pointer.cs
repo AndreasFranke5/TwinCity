@@ -5,6 +5,7 @@ using Vector3 = UnityEngine.Vector3;
 public class spawn_pointer : MonoBehaviour
 {
     public GameObject pointerPrefab;
+    public GameObject yellowPrefeb;
 
     public Transform spawnPoint;
 
@@ -25,6 +26,7 @@ public class spawn_pointer : MonoBehaviour
     public void SpawnPointer()
     {
         Instantiate(pointerPrefab,SpawnPosition,Quaternion.identity);
+        Instantiate(yellowPrefeb,SpawnPosition,Quaternion.identity);
                    Debug.Log("Prefab not assigned!");
 
     }
