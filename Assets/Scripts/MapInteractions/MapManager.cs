@@ -10,6 +10,9 @@ public class MapSyncController : NetworkBehaviour
     [Networked] public float MapRotation { get; set; }
     [Networked] public float WaterLevel { get; set; }
 
+    private Coroutine waterLevelCoroutine;
+    private const float waterLerpDuration = 0.5f; // Duration in seconds
+
     public override void Spawned()
     {
         if (HasStateAuthority && rotatableMapBase != null && waterPlane != null)
@@ -47,8 +50,25 @@ public class MapSyncController : NetworkBehaviour
         if (rotatableMapBase != null && waterPlane != null)
         {
             Vector3 basePosition = rotatableMapBase.position;
-            waterPlane.position = new Vector3(basePosition.x, basePosition.y + WaterLevel, basePosition.z);
+            Vector3 targetPosition = new Vector3(basePosition.x, basePosition.y + WaterLevel, basePosition.z);
+
+            if (waterLevelCoroutine != null)
+                StopCoroutine(waterLevelCoroutine);
+
+            waterLevelCoroutine = StartCoroutine(AnimateWaterLevel(waterPlane.position, targetPosition, waterLerpDuration));
         }
+    }
+
+    private System.Collections.IEnumerator AnimateWaterLevel(Vector3 startPos, Vector3 endPos, float duration)
+    {
+        float elapsed = 0f;
+        while (elapsed < duration)
+        {
+            waterPlane.position = Vector3.Lerp(startPos, endPos, elapsed / duration);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+        waterPlane.position = endPos;
     }
 
     // Optional water level RPCs
