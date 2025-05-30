@@ -1,4 +1,6 @@
 using UnityEngine;
+using Quaternion = UnityEngine.Quaternion;
+using Vector3 = UnityEngine.Vector3;
 
 public class spawn_pointer : MonoBehaviour
 {
@@ -7,42 +9,29 @@ public class spawn_pointer : MonoBehaviour
 
     public Transform spawnPoint;
 
+    private static readonly Vector3 SpawnPosition = new Vector3(0,0,0);
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        // Optional: Validate the spawn point
-        if (spawnPoint == null)
-        {
-            Debug.LogWarning("Spawn point not assigned!");
-        }
+
     }
 
+    // Update is called once per frame
     void Update()
     {
-        // Optional: Trigger spawn for testing
-        // if (Input.GetKeyDown(KeyCode.Space)) SpawnPointer();
+
     }
 
     public void SpawnPointer()
     {
-        if (pointerPrefab != null && spawnPoint != null)
-        {
-            Instantiate(pointerPrefab, spawnPoint.position, spawnPoint.rotation);
-        }
-        else
-        {
-            Debug.LogWarning("Pointer prefab or spawn point not assigned!");
-        }
-    }
+        Instantiate(pointerPrefab,SpawnPosition,Quaternion.identity);
+        Debug.Log("Prefab not assigned!");
 
+    }
     public void SpawnPointer1()
     {
-        if (yellowPrefeb != null && spawnPoint != null)
-        {
-            Instantiate(yellowPrefeb, spawnPoint.position, spawnPoint.rotation);
-        }
-        else
-        {
-            Debug.LogWarning("Yellow prefab or spawn point not assigned!");
-        }
+         Instantiate(yellowPrefeb,SpawnPosition,Quaternion.identity);
+          Debug.Log("Prefab not assigned!");
     }
 }
