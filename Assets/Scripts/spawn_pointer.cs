@@ -3,7 +3,7 @@ using UnityEngine;
 public class spawn_pointer : MonoBehaviour
 {
     public GameObject pointerPrefab;
-    public GameObject yellowPrefeb;
+    public GameObject yellowPrefab;
 
     public Transform spawnPoint;
 
@@ -26,7 +26,7 @@ public class spawn_pointer : MonoBehaviour
     {
         if (pointerPrefab != null && spawnPoint != null)
         {
-            Instantiate(pointerPrefab, spawnPoint.position, spawnPoint.rotation);
+            Instantiate(pointerPrefab, spawnPoint.position, spawnPoint.rotation, spawnPoint.parent);
         }
         else
         {
@@ -36,9 +36,9 @@ public class spawn_pointer : MonoBehaviour
 
     public void SpawnPointer1()
     {
-        if (yellowPrefeb != null && spawnPoint != null)
+        if (yellowPrefab != null && spawnPoint != null)
         {
-            Instantiate(yellowPrefeb, spawnPoint.position, spawnPoint.rotation);
+            Instantiate(yellowPrefab, spawnPoint.position, spawnPoint.rotation, spawnPoint.parent);
         }
         else
         {
