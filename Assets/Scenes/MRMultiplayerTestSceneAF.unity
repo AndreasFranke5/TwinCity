@@ -14154,6 +14154,7 @@ GameObject:
   m_Component:
   - component: {fileID: 938840359}
   - component: {fileID: 938840360}
+  - component: {fileID: 938840361}
   m_Layer: 0
   m_Name: MarkerSpawnPoint
   m_TagString: Untagged
@@ -14189,8 +14190,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointerPrefab: {fileID: 2166046231953291169, guid: 6bfaf404feae2914294fcf88ba92dc8a, type: 3}
-  yellowPrefeb: {fileID: 278487655167324751, guid: 9d372510c4052e144a79c1082fc6203b, type: 3}
+  yellowPrefab: {fileID: 278487655167324751, guid: 9d372510c4052e144a79c1082fc6203b, type: 3}
   spawnPoint: {fileID: 938840359}
+--- !u!114 &938840361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938840358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SortKey: 4266654701
+  ObjectInterest: 1
+  Flags: 262145
+  NestedObjects: []
+  NetworkedBehaviours:
+  - {fileID: 938840360}
+  ForceRemoteRenderTimeframe: 0
 --- !u!1 &948134574
 GameObject:
   m_ObjectHideFlags: 0
@@ -32885,7 +32905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 844ac86b07dcfa3468f56da55d787510, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _showCreditsOnScreen: 1
+  _showCreditsOnScreen: 0
   _tilesetSource: 0
   _url: 
   _ionAssetID: 2275207
@@ -32908,7 +32928,7 @@ MonoBehaviour:
     _attenuation: 0
     _geometricErrorScale: 1
     _maximumAttenuation: 0
-    _baseResolution: 0
+    _baseResolution: 3
   _suspendUpdate: 0
   _showTilesInHierarchy: 0
   _updateInEditor: 1

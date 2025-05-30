@@ -1,48 +1,108 @@
 using UnityEngine;
+using Fusion;
+using System.Collections.Generic;
 
-public class spawn_pointer : MonoBehaviour
+public enum MarkerType : byte
+{
+    Red,
+    Yellow
+}
+
+[System.Serializable]
+public struct MarkerData
+{
+    public int ID;
+    public MarkerType Type;
+    public Vector3 Position;
+}
+
+public class spawn_pointer : NetworkBehaviour
 {
     public GameObject pointerPrefab;
-    public GameObject yellowPrefeb;
-
+    public GameObject yellowPrefab;
     public Transform spawnPoint;
 
-    void Start()
-    {
-        // Optional: Validate the spawn point
-        if (spawnPoint == null)
-        {
-            Debug.LogWarning("Spawn point not assigned!");
-        }
-    }
+    private Dictionary<int, GameObject> spawnedMarkers = new(); // Tracks instances by ID
+    private Dictionary<int, MarkerData> markerDataStore = new(); // Only on host
+    private int markerIdCounter = 0; // Only on host
 
-    void Update()
+    public override void Spawned()
     {
-        // Optional: Trigger spawn for testing
-        // if (Input.GetKeyDown(KeyCode.Space)) SpawnPointer();
+        if (!HasStateAuthority) return;
+
+        // If desired, preload existing markers here
     }
 
     public void SpawnPointer()
     {
-        if (pointerPrefab != null && spawnPoint != null)
-        {
-            Instantiate(pointerPrefab, spawnPoint.position, spawnPoint.rotation);
-        }
-        else
-        {
-            Debug.LogWarning("Pointer prefab or spawn point not assigned!");
-        }
+        if (spawnPoint != null)
+            RPC_RequestSpawnMarker(MarkerType.Red, spawnPoint.position);
     }
 
     public void SpawnPointer1()
     {
-        if (yellowPrefeb != null && spawnPoint != null)
+        if (spawnPoint != null)
+            RPC_RequestSpawnMarker(MarkerType.Yellow, spawnPoint.position);
+    }
+
+    [Rpc(RpcSources.All, RpcTargets.StateAuthority)]
+    private void RPC_RequestSpawnMarker(MarkerType type, Vector3 position)
+    {
+        int id = markerIdCounter++;
+        markerDataStore[id] = new MarkerData { ID = id, Type = type, Position = position };
+
+        RPC_SpawnMarker(id, type, position);
+    }
+
+
+    [Rpc(RpcSources.StateAuthority, RpcTargets.All)]
+    private void RPC_SpawnMarker(int id, MarkerType type, Vector3 position)
+    {
+        GameObject prefab = type == MarkerType.Red ? pointerPrefab : yellowPrefab;
+        if (prefab == null) return;
+
+        GameObject instance = Instantiate(prefab, position, Quaternion.identity, spawnPoint?.parent);
+        spawnedMarkers[id] = instance;
+         
+        var interaction = instance.GetComponent<MarkerInteraction>();
+        if (interaction != null)
         {
-            Instantiate(yellowPrefeb, spawnPoint.position, spawnPoint.rotation);
-        }
-        else
-        {
-            Debug.LogWarning("Yellow prefab or spawn point not assigned!");
+            interaction.markerId = id;
+            interaction.spawnManager = this;
         }
     }
+
+
+    public void MoveMarker(int id, Vector3 newPosition)
+    {
+        if (HasStateAuthority && markerDataStore.ContainsKey(id))
+        {
+            MarkerData updated = markerDataStore[id];
+            updated.Position = newPosition;
+            markerDataStore[id] = updated;
+
+            RPC_UpdateMarkerPosition(id, newPosition);
+        }
+    }
+
+    [Rpc(RpcSources.StateAuthority, RpcTargets.All)]
+    private void RPC_UpdateMarkerPosition(int id, Vector3 newPosition)
+    {
+        if (spawnedMarkers.TryGetValue(id, out GameObject marker))
+        {
+            marker.transform.position = newPosition;
+        }
+    }
+
+    public void SendMarkerUpdateToHost(int id, Vector3 newPosition)
+    {
+        RPC_ClientRequestsMove(id, newPosition);
+    }
+
+    [Rpc(RpcSources.All, RpcTargets.StateAuthority)]
+    private void RPC_ClientRequestsMove(int id, Vector3 newPosition)
+    {
+        MoveMarker(id, newPosition);
+    }
+
 }
