@@ -14,10 +14,8 @@ public class MapRotationBroadcaster : MonoBehaviour
     private void Awake()
     {
         interactable = GetComponentInChildren<InteractableUnityEventWrapper>();
-        Debug.LogWarning("TEST");
         if (interactable != null)
         {
-        Debug.LogWarning("TEST2");
             interactable.WhenSelect.AddListener(() => OnGrab());
             interactable.WhenUnselect.AddListener(() => OnRelease());
         }
@@ -42,7 +40,7 @@ public class MapRotationBroadcaster : MonoBehaviour
 
         if (mapSync != null)
         {
-            Debug.LogWarning("Request Auth");
+            Debug.Log("Request StateAuthority");
             mapSync.RequestAuthority();
         }
     }
@@ -53,7 +51,7 @@ public class MapRotationBroadcaster : MonoBehaviour
 
         if (mapSync != null)
         {
-            Debug.LogWarning("Release Auth");
+            Debug.Log("Release StateAuthority");
             mapSync.ReleaseAuthority();
         }
     }

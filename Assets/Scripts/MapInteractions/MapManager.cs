@@ -13,11 +13,9 @@ public class MapSyncController : NetworkBehaviour
     private Coroutine waterLevelCoroutine;
     private const float waterLerpDuration = 0.5f; // Duration in seconds
     private float lastSentRotation = -1f;
-    private Quaternion targetRotation;
 
     public override void Spawned()
     {
-        Debug.LogWarning("SPAWNEED");
         if (HasStateAuthority && rotatableMapBase != null && waterPlane != null)
         {
             WaterLevel = waterPlane.position.y - rotatableMapBase.position.y;
@@ -46,7 +44,6 @@ public class MapSyncController : NetworkBehaviour
 
             if (!HasStateAuthority)
             {
-                //Debug.LogWarning("NO STATE AUTH; WERE MOVING BASE");
                 rotatableMapBase.localRotation = Quaternion.Euler(0f, MapRotation, 0f);
             }
         }
@@ -71,9 +68,6 @@ public class MapSyncController : NetworkBehaviour
     public void SendLiveRotation(float newYRotation)
     {
         RPC_StreamRotation(newYRotation);
-        if (Object.HasInputAuthority)
-        {
-        }
     }
 
     private void ApplyWaterLevel()
