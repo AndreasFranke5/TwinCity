@@ -29,9 +29,7 @@ public class PathfindingGrid : MonoBehaviour
                 grid[x, z] = new GridNode(walkable, worldPoint, x, z);
 
                 if (nodePrefab != null && walkable)
-                {
                     Instantiate(nodePrefab, worldPoint, Quaternion.identity);
-                }
             }
         }
     }
@@ -54,10 +52,10 @@ public class PathfindingGrid : MonoBehaviour
 
     public List<GridNode> GetAllNodes()
     {
-        List<GridNode> allNodes = new List<GridNode>();
+        var list = new List<GridNode>();
         foreach (var node in grid)
-            allNodes.Add(node);
-        return allNodes;
+            list.Add(node);
+        return list;
     }
 
     public List<GridNode> GetNeighbors(GridNode node)
@@ -67,8 +65,7 @@ public class PathfindingGrid : MonoBehaviour
         {
             for (int z = -1; z <= 1; z++)
             {
-                if (x == 0 && z == 0)
-                    continue;
+                if (x == 0 && z == 0) continue;
                 int checkX = node.gridX + x;
                 int checkZ = node.gridZ + z;
                 if (checkX >= 0 && checkX < gridSizeX && checkZ >= 0 && checkZ < gridSizeZ)

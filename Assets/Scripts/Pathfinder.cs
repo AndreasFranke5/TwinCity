@@ -4,123 +4,99 @@ using UnityEngine;
 public class Pathfinder : MonoBehaviour
 {
     public PathfindingGrid grid;
-    public string redMarkerTag = "RedMarker";
-    public string yellowMarkerTag = "YellowMarker";
     public Material lineMaterial;
 
-    private LineRenderer lineRenderer;
-    private Transform redMarker;
-    private Transform yellowMarker;
+    private LineRenderer currentLine;
 
-    void Start()
+    public void DrawPath(Vector3 startWorldPos, Vector3 endWorldPos)
     {
-        lineRenderer = gameObject.AddComponent<LineRenderer>();
-        lineRenderer.material = lineMaterial != null ? lineMaterial : new Material(Shader.Find("Sprites/Default"));
-        lineRenderer.startWidth = 0.05f;
-        lineRenderer.endWidth = 0.05f;
-        lineRenderer.positionCount = 0;
+        GridNode startNode = grid.GetNearestNode(startWorldPos);
+        GridNode endNode = grid.GetNearestNode(endWorldPos);
+        if (startNode == null || endNode == null) return;
 
-        InvokeRepeating(nameof(CheckForMarkers), 1f, 0.5f); // Check every 0.5 seconds
+        List<GridNode> path = AStar(startNode, endNode);
+        if (path == null || path.Count == 0) return;
+
+        if (currentLine == null)
+        {
+            GameObject lineObj = new GameObject("PathLine");
+            currentLine = lineObj.AddComponent<LineRenderer>();
+            currentLine.material = lineMaterial;
+            currentLine.startWidth = 0.05f;
+            currentLine.endWidth = 0.05f;
+            currentLine.useWorldSpace = true;
+            currentLine.positionCount = 0;
+        }
+
+        currentLine.positionCount = path.Count;
+        for (int i = 0; i < path.Count; i++)
+            currentLine.SetPosition(i, path[i].WorldPosition);
     }
 
-    void CheckForMarkers()
+    public void ClearCurrentPath()
     {
-        redMarker = GameObject.FindWithTag(redMarkerTag)?.transform;
-        yellowMarker = GameObject.FindWithTag(yellowMarkerTag)?.transform;
-
-        if (redMarker != null && yellowMarker != null)
+        if (currentLine != null)
         {
-            ComputePath(redMarker, yellowMarker);
-        }
-        else
-        {
-            ClearPath();
+            Destroy(currentLine.gameObject);
+            currentLine = null;
         }
     }
 
-    void ComputePath(Transform startMarker, Transform endMarker)
+    private List<GridNode> AStar(GridNode start, GridNode end)
     {
-        if (grid == null)
+        var openSet = new List<GridNode> { start };
+        var cameFrom = new Dictionary<GridNode, GridNode>();
+        var gScore = new Dictionary<GridNode, float>();
+        var fScore = new Dictionary<GridNode, float>();
+
+        foreach (var node in grid.GetAllNodes())
         {
-            Debug.LogError("Pathfinder: Grid reference missing.");
-            return;
+            gScore[node] = float.MaxValue;
+            fScore[node] = float.MaxValue;
         }
 
-        GridNode startNode = grid.GetNearestNode(startMarker.position);
-        GridNode endNode = grid.GetNearestNode(endMarker.position);
-
-        List<GridNode> openSet = new List<GridNode>();
-        HashSet<GridNode> closedSet = new HashSet<GridNode>();
-        openSet.Add(startNode);
+        gScore[start] = 0;
+        fScore[start] = Heuristic(start, end);
 
         while (openSet.Count > 0)
         {
-            GridNode currentNode = openSet[0];
-            for (int i = 1; i < openSet.Count; i++)
+            openSet.Sort((a, b) => fScore[a].CompareTo(fScore[b]));
+            GridNode current = openSet[0];
+            if (current == end)
+                return ReconstructPath(cameFrom, current);
+
+            openSet.Remove(current);
+            foreach (var neighbor in grid.GetNeighbors(current))
             {
-                if (openSet[i].fCost < currentNode.fCost ||
-                    (openSet[i].fCost == currentNode.fCost && openSet[i].hCost < currentNode.hCost))
+                if (!neighbor.isWalkable) continue;
+
+                float tentativeG = gScore[current] + Vector3.Distance(current.WorldPosition, neighbor.WorldPosition);
+                if (tentativeG < gScore[neighbor])
                 {
-                    currentNode = openSet[i];
-                }
-            }
-
-            openSet.Remove(currentNode);
-            closedSet.Add(currentNode);
-
-            if (currentNode == endNode)
-            {
-                RetracePath(startNode, endNode);
-                return;
-            }
-
-            foreach (GridNode neighbor in grid.GetNeighbors(currentNode))
-            {
-                if (!neighbor.isWalkable || closedSet.Contains(neighbor))
-                    continue;
-
-                float newCostToNeighbor = currentNode.gCost + Vector3.Distance(currentNode.WorldPosition, neighbor.WorldPosition);
-                if (newCostToNeighbor < neighbor.gCost || !openSet.Contains(neighbor))
-                {
-                    neighbor.gCost = newCostToNeighbor;
-                    neighbor.hCost = Vector3.Distance(neighbor.WorldPosition, endNode.WorldPosition);
-                    neighbor.parent = currentNode;
-
+                    cameFrom[neighbor] = current;
+                    gScore[neighbor] = tentativeG;
+                    fScore[neighbor] = tentativeG + Heuristic(neighbor, end);
                     if (!openSet.Contains(neighbor))
                         openSet.Add(neighbor);
                 }
             }
         }
-
-        Debug.LogWarning("Pathfinder: No path found.");
-        ClearPath();
+        return null;
     }
 
-    void RetracePath(GridNode startNode, GridNode endNode)
+    private float Heuristic(GridNode a, GridNode b)
     {
-        List<GridNode> path = new List<GridNode>();
-        GridNode currentNode = endNode;
-
-        while (currentNode != startNode)
-        {
-            path.Add(currentNode);
-            currentNode = currentNode.parent;
-        }
-        path.Add(startNode);
-        path.Reverse();
-
-        Vector3[] points = new Vector3[path.Count];
-        for (int i = 0; i < path.Count; i++)
-        {
-            points[i] = path[i].WorldPosition + Vector3.up * 0.05f;
-        }
-
-        lineRenderer.positionCount = points.Length;
-        lineRenderer.SetPositions(points);
+        return Vector3.Distance(a.WorldPosition, b.WorldPosition);
     }
 
-    void ClearPath()
+    private List<GridNode> ReconstructPath(Dictionary<GridNode, GridNode> cameFrom, GridNode current)
     {
-        lineRenderer.positionCount = 0;
+        List<GridNode> path = new List<GridNode> { current };
+        while (cameFrom.ContainsKey(current))
+        {
+            current = cameFrom[current];
+            path.Insert(0, current);
+        }
+        return path;
     }
 }
