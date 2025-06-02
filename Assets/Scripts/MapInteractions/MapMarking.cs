@@ -24,7 +24,11 @@ public class MarkerRaycastToMap : MonoBehaviour
         {
             if (marker == null) continue;
 
-            Vector3 origin = marker.transform.position;
+            Renderer rend = marker.GetComponent<Renderer>();
+            if (rend == null) continue;
+
+            Bounds bounds = rend.bounds;
+            Vector3 origin = new Vector3(bounds.center.x, bounds.min.y, bounds.center.z);
             Vector3 direction = Vector3.down;
 
             if (Physics.Raycast(origin, direction, out RaycastHit hit, rayLength, mapLayer))
