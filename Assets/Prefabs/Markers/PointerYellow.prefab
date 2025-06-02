@@ -201,6 +201,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ea22ffa39214248a78d94d5454bf5d95, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6246733288837383426}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ea22ffa39214248a78d94d5454bf5d95, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8387406362723696104}
   m_SourcePrefab: {fileID: 100100000, guid: ea22ffa39214248a78d94d5454bf5d95, type: 3}
 --- !u!1 &278487655167324751 stripped
 GameObject:
@@ -300,6 +303,43 @@ MonoBehaviour:
   NetworkedBehaviours:
   - {fileID: 2069245661971416786}
   ForceRemoteRenderTimeframe: 0
+--- !u!114 &8387406362723696104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278487655167324751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1464721f2283eb14e94a33e812b47be4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interactableView: {fileID: 5694127341979285494}
+  _whenHover:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenUnhover:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenSelect:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenUnselect:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenInteractorViewAdded:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenInteractorViewRemoved:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenSelectingInteractorViewAdded:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenSelectingInteractorViewRemoved:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &618879501172222197 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ea22ffa39214248a78d94d5454bf5d95, type: 3}
