@@ -7,12 +7,18 @@ public class MapSyncController : NetworkBehaviour
     [SerializeField] private Transform waterPlane;
     [SerializeField] private Transform mapModel;
 
+    public GameObject scenario0;
+    public GameObject scenario1;
+
     [Networked] public float MapRotation { get; set; }
     [Networked] public float WaterLevel { get; set; }
+
+    public int CurrentScenario { get; set; }
 
     private Coroutine waterLevelCoroutine;
     private const float waterLerpDuration = 0.5f; // Duration in seconds
     private float lastSentRotation = -1f;
+
 
     public override void Spawned()
     {
@@ -22,6 +28,8 @@ public class MapSyncController : NetworkBehaviour
         }
 
         ApplyWaterLevel();
+
+        ApplyScenario(0);
     }
 
     public override void FixedUpdateNetwork()
@@ -34,6 +42,30 @@ public class MapSyncController : NetworkBehaviour
             MapRotation = currentY;
             lastSentRotation = currentY;
         }
+    }
+
+    public void ApplyScenario(int scenario)
+    {
+        Debug.Log($"ApplyScenario called with: {scenario}");
+
+        if (scenario0 == null || scenario1 == null)
+        {
+            Debug.LogError("Scenario GameObjects are not assigned!");
+            return;
+        }
+
+        if (scenario == 0)
+        {
+            scenario0.SetActive(true);
+            scenario1.SetActive(false);
+        }
+        else if (scenario == 1)
+        {
+            scenario0.SetActive(false);
+            scenario1.SetActive(true);
+        }
+
+        CurrentScenario = scenario;
     }
 
     public override void Render()
