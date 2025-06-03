@@ -59,6 +59,13 @@ public class spawn_pointer : NetworkBehaviour
             RPC_RequestSpawnMarker(MarkerType.GreenLine, spawnPoint.position);
     }
 
+    private static Vector3 AnchorPoint(GameObject go)
+    {
+        var tip = go.transform.Find("Tip");
+        return tip ? tip.position : go.transform.position;
+    }
+
+
     [Rpc(RpcSources.All, RpcTargets.StateAuthority)]
     private void RPC_RequestSpawnMarker(MarkerType type, Vector3 position)
     {
@@ -144,7 +151,11 @@ public class spawn_pointer : NetworkBehaviour
         lr.startColor = lr.endColor = Color.green;
         lr.startWidth = lr.endWidth = lineWidth;
         lr.positionCount = 2;
-
+        lr.alignment = LineAlignment.TransformZ;
+        lr.SetPosition(0, AnchorPoint(a));
+        lr.SetPosition(1, AnchorPoint(b));
+        Vector3 dir = AnchorPoint(b) - AnchorPoint(a);
+        lineObj.transform.rotation = Quaternion.LookRotation(dir, Vector3.up);
         linePairs.Add((a, b, lr));
     }
     private void Update()
@@ -153,8 +164,10 @@ public class spawn_pointer : NetworkBehaviour
         {
             if (A && B && LR)
             {
-                LR.SetPosition(0, A.transform.position);
-                LR.SetPosition(1, B.transform.position);
+                LR.SetPosition(0, AnchorPoint(A));
+                LR.SetPosition(1, AnchorPoint(B));
+                Vector3 dir = AnchorPoint(B) - AnchorPoint(A);
+                LR.transform.rotation = Quaternion.LookRotation(dir, Vector3.up);
             }
         }
     }
