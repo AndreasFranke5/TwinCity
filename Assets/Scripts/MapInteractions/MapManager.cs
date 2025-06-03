@@ -10,6 +10,10 @@ public class MapSyncController : NetworkBehaviour
     [Networked] public float MapRotation { get; set; }
     [Networked] public float WaterLevel { get; set; }
 
+    private Coroutine waterLevelCoroutine;
+    private const float waterLerpDuration = 0.5f; // Duration in seconds
+    private float lastSentRotation = -1f;
+
     public override void Spawned()
     {
         if (HasStateAuthority && rotatableMapBase != null && waterPlane != null)
@@ -22,10 +26,13 @@ public class MapSyncController : NetworkBehaviour
 
     public override void FixedUpdateNetwork()
     {
-        if (HasStateAuthority && rotatableMapBase != null)
+        if (!HasStateAuthority || rotatableMapBase == null) return;
+
+        float currentY = rotatableMapBase.localEulerAngles.y;
+        if (Mathf.Abs(currentY - lastSentRotation) > 0.1f)
         {
-            // Sync current rotation each tick
-            MapRotation = rotatableMapBase.localEulerAngles.y;
+            MapRotation = currentY;
+            lastSentRotation = currentY;
         }
     }
 
@@ -33,13 +40,34 @@ public class MapSyncController : NetworkBehaviour
     {
         if (mapModel != null)
         {
-            var interpolator = new NetworkBehaviourBufferInterpolator(this);
-            if (interpolator.Valid)
+            mapModel.localRotation = Quaternion.Euler(0f, MapRotation, 0f);
+
+            if (!HasStateAuthority)
             {
-                float interpolatedYRotation = interpolator.Float(nameof(MapRotation));
-                mapModel.localRotation = Quaternion.Euler(0f, interpolatedYRotation, 0f);
+                rotatableMapBase.localRotation = Quaternion.Euler(0f, MapRotation, 0f);
             }
         }
+    }
+
+    public void RequestAuthority()
+    {
+        Object.RequestStateAuthority();
+    }
+
+    public void ReleaseAuthority()
+    {
+        Object.ReleaseStateAuthority();
+    }
+
+    [Rpc(RpcSources.All, RpcTargets.StateAuthority, InvokeLocal = false)]
+    private void RPC_StreamRotation(float newRotationY)
+    {
+        MapRotation = newRotationY;
+    }
+
+    public void SendLiveRotation(float newYRotation)
+    {
+        RPC_StreamRotation(newYRotation);
     }
 
     private void ApplyWaterLevel()
@@ -47,26 +75,43 @@ public class MapSyncController : NetworkBehaviour
         if (rotatableMapBase != null && waterPlane != null)
         {
             Vector3 basePosition = rotatableMapBase.position;
-            waterPlane.position = new Vector3(basePosition.x, basePosition.y + WaterLevel, basePosition.z);
+            Vector3 targetPosition = new Vector3(basePosition.x, basePosition.y + WaterLevel, basePosition.z);
+
+            if (waterLevelCoroutine != null)
+                StopCoroutine(waterLevelCoroutine);
+
+            waterLevelCoroutine = StartCoroutine(AnimateWaterLevel(waterPlane.position, targetPosition, waterLerpDuration));
         }
     }
 
+    private System.Collections.IEnumerator AnimateWaterLevel(Vector3 startPos, Vector3 endPos, float duration)
+    {
+        float elapsed = 0f;
+        while (elapsed < duration)
+        {
+            waterPlane.position = Vector3.Lerp(startPos, endPos, elapsed / duration);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+        waterPlane.position = endPos;
+    }
+
     // Optional water level RPCs
-    [Rpc(RpcSources.All, RpcTargets.StateAuthority)]
+    [Rpc(RpcSources.All, RpcTargets.All)]
     public void RPC_RequestWaterLevel(float level)
     {
         WaterLevel = level;
         ApplyWaterLevel();
     }
 
-    [Rpc(RpcSources.All, RpcTargets.StateAuthority)]
+    [Rpc(RpcSources.All, RpcTargets.All)]
     public void RPC_IncreaseWaterLevel(float amount)
     {
         WaterLevel += amount;
         ApplyWaterLevel();
     }
 
-    [Rpc(RpcSources.All, RpcTargets.StateAuthority)]
+    [Rpc(RpcSources.All, RpcTargets.All)]
     public void RPC_DecreaseWaterLevel(float amount)
     {
         WaterLevel -= amount;
