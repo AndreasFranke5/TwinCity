@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 29153c748dd7f6248b72957796e14a1a
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 176919
+  packageName: Line Texture Panning Shader
+  packageVersion: 1.0
+  assetPath: Assets/YAH/TexturePanningAsset/Prefabs/SM_Teleport_Indicator.prefab
+  uploadId: 385200

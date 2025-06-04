@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 66fe496a81f94964ba22dc92ac7aab8a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 176919
+  packageName: Line Texture Panning Shader
+  packageVersion: 1.0
+  assetPath: Assets/YAH/TexturePanningAsset/Scripts/YAH_Helper/YAH_MonoBehavior.cs
+  uploadId: 385200

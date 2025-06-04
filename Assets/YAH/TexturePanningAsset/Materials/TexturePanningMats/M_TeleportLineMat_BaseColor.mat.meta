@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8d3294ccb45688742b60a42ba4eeafbd
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 176919
+  packageName: Line Texture Panning Shader
+  packageVersion: 1.0
+  assetPath: Assets/YAH/TexturePanningAsset/Materials/TexturePanningMats/M_TeleportLineMat_BaseColor.mat
+  uploadId: 385200

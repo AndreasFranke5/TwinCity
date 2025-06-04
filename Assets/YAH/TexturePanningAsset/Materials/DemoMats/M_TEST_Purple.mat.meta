@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3fbe2de6c3dca104cbed8cf19e12fa4c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 176919
+  packageName: Line Texture Panning Shader
+  packageVersion: 1.0
+  assetPath: Assets/YAH/TexturePanningAsset/Materials/DemoMats/M_TEST_Purple.mat
+  uploadId: 385200
