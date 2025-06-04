@@ -545,7 +545,7 @@ Transform:
   m_GameObject: {fileID: 12302918}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4741, y: 0.9749001, z: 0.1476}
+  m_LocalPosition: {x: 0.4741, y: 0.7669001, z: 0.1476}
   m_LocalScale: {x: 0.04, y: 0.08, z: 0.04}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -18728,9 +18728,9 @@ MonoBehaviour:
   rotatableMapBase: {fileID: 1671352498}
   waterPlane: {fileID: 1144548256}
   mapModel: {fileID: 1326111831}
-  scenario0: {fileID: 1595470561}
-  scenario1: {fileID: 397131508}
-  scenario2: {fileID: 1019604071}
+  scenario0: {fileID: 1695742942}
+  scenario1: {fileID: 1894726206}
+  scenario2: {fileID: 397131508}
   _MapRotation: 0
   _WaterLevel: 0
 --- !u!4 &656277342
@@ -29026,7 +29026,7 @@ Transform:
   m_GameObject: {fileID: 1069376357}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.46163, y: 1.031, z: 0.16271}
+  m_LocalPosition: {x: 1.46163, y: 0.823, z: 0.16271}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -52291,7 +52291,7 @@ MonoBehaviour:
   _ionAssetID: 2275207
   _ionAccessToken: 
   _ionServer: {fileID: 11400000, guid: 119c55a6562b0d0479a2cb5944c62cbf, type: 2}
-  _maximumScreenSpaceError: 50
+  _maximumScreenSpaceError: 40
   _preloadAncestors: 1
   _preloadSiblings: 1
   _forbidHoles: 0
