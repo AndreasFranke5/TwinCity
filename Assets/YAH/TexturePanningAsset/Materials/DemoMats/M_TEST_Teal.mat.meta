@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6f42f7964fd4f644fa85fc97b30fb45f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 176919
+  packageName: Line Texture Panning Shader
+  packageVersion: 1.0
+  assetPath: Assets/YAH/TexturePanningAsset/Materials/DemoMats/M_TEST_Teal.mat
+  uploadId: 385200
