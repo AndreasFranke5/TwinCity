@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f8d21a9d566fbb24f998830114c39e95
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 176919
+  packageName: Line Texture Panning Shader
+  packageVersion: 1.0
+  assetPath: Assets/YAH/TexturePanningAsset/Scenes/TeleportLineDemo.unity
+  uploadId: 385200
