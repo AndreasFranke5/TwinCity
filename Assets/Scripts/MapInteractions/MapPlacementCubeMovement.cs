@@ -59,6 +59,9 @@ public class MapPlacementCubeMovement : MonoBehaviour
 
     private void OnRelease()
     {
+        Vector3 pos = transform.position;
+        fixedX = pos.x;
+        fixedZ = pos.z;
         isGrabbed = false;
     }
 

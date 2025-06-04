@@ -9,6 +9,7 @@ public class MapSyncController : NetworkBehaviour
 
     public GameObject scenario0;
     public GameObject scenario1;
+    public GameObject scenario2;
 
     [Networked] public float MapRotation { get; set; }
     [Networked] public float WaterLevel { get; set; }
@@ -58,11 +59,13 @@ public class MapSyncController : NetworkBehaviour
         {
             scenario0.SetActive(true);
             scenario1.SetActive(false);
+            scenario2.SetActive(false);
         }
         else if (scenario == 1)
         {
             scenario0.SetActive(false);
             scenario1.SetActive(true);
+            scenario2.SetActive(true);
         }
 
         CurrentScenario = scenario;
