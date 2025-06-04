@@ -8,12 +8,12 @@ We are four master students for an academic group project in the course *Design 
 
 ## 1.Introduction
 
-**TwinCity** is an experimental Mixed Reality (MR) platform that overlays a real-time 3D model of a city using Unity, Cesium for Unity, and Google Photorealistic 3D Tiles. The system serves as a collaborative emergency response environment, enabling users to explore, simulate disasters, and coordinate interventions inside a Digital Twin of a real-world location. This project was developed by a four-person team at SU to explore concepts of:
-- Mixed Reality spatial interfaces
-- Collaborative interaction and role-based interdependence
-- Digital Twins as real-time responsive environments
+TwinCity is an experimental Mixed Reality (MR) platform that integrates Unity, Cesium for Unity, and Google Photorealistic 3D Tiles to create a real-time 3D digital twin of urban environments. Designed as a collaborative emergency response tool, it enables users to simulate disasters, analyze impacts, and coordinate interventions within a dynamic virtual replica of real-world locations. As climate change increasingly disrupts lives, effective cross-departmental coordination is crucial. Unlike traditional tools, TwinCity enhances situational awareness by allowing teams to explore, collaborate, and analyze data in an immersive 3D space. Users can work together seamlessly to address environmental challenges, gain real-time insights from disaster zones, and optimize response strategies, thereby improving decision-making and operational efficiency.
+
+TwinCity creates a high-fidelity virtual replica of physical cities, enabling stakeholders to visualize, analyze, and interact with geospatial data in an immersive 3D environment. The platform serves as a collaborative decision-support system for government agencies, disaster response teams, and urban planners. By integrating real-time IoT sensor data, environmental simulations, and multi-user interaction, TwinCity facilitates disaster preparedness & response in simulating floods, fires, and other emergencies in a risk-free virtual space. Climate Adaptation planning in modeling the impact of extreme weather events on urban infrastructure. Cross-departmental coordination in enabling real-time collaboration among emergency services, utilities, and policymakers.
 
 ## 2.Design process
+
 ## 3. System description
 
 Features and fuctionalities
