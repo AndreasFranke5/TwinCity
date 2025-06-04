@@ -29,7 +29,7 @@ Library/
 *.gi
 
 # Local dev notes or screenshots
-*.png
+#*.png
 *.jpg
 notes.txt
 
