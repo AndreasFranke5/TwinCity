@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 5404f06302abbae42b02925bb9a81952
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 176919
+  packageName: Line Texture Panning Shader
+  packageVersion: 1.0
+  assetPath: Assets/YAH/TexturePanningAsset/Scripts/YAH_Helper/Bezier.cs
+  uploadId: 385200
