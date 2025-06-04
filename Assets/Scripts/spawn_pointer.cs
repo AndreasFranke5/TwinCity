@@ -22,6 +22,7 @@ public class spawn_pointer : NetworkBehaviour
     public GameObject pointerPrefab;
     public GameObject yellowPrefab;
     public GameObject greenPrefab;
+    public GameObject linePrefab;
     public Transform spawnPoint;
 
     public Material lineMaterial;
@@ -61,8 +62,10 @@ public class spawn_pointer : NetworkBehaviour
 
     private static Vector3 AnchorPoint(GameObject go)
     {
-        var tip = go.transform.Find("Tip");
-        return tip ? tip.position : go.transform.position;
+        Renderer rend = go.GetComponent<Renderer>();
+
+        Bounds bounds = rend.bounds;
+        return new Vector3(bounds.center.x, bounds.min.y, bounds.center.z);
     }
 
 
@@ -143,6 +146,12 @@ public class spawn_pointer : NetworkBehaviour
 
     private void CreateLineBetween(GameObject a, GameObject b)
     {
+        var line = Instantiate(linePrefab);
+        var lineLR = line.gameObject.GetComponent<LineRenderer>();
+        lineLR.SetPosition(0, AnchorPoint(a));
+        lineLR.SetPosition(1, AnchorPoint(b));
+        linePairs.Add((a, b, lineLR));
+        /*
         GameObject lineObj = new GameObject($"Line_{a.GetInstanceID()}_{b.GetInstanceID()}");
         lineObj.transform.parent = transform;
 
@@ -157,7 +166,9 @@ public class spawn_pointer : NetworkBehaviour
         Vector3 dir = AnchorPoint(b) - AnchorPoint(a);
         lineObj.transform.rotation = Quaternion.LookRotation(dir, Vector3.up);
         linePairs.Add((a, b, lr));
+        */
     }
+
     private void Update()
     {
         foreach (var (A, B, LR) in linePairs)
@@ -166,8 +177,8 @@ public class spawn_pointer : NetworkBehaviour
             {
                 LR.SetPosition(0, AnchorPoint(A));
                 LR.SetPosition(1, AnchorPoint(B));
-                Vector3 dir = AnchorPoint(B) - AnchorPoint(A);
-                LR.transform.rotation = Quaternion.LookRotation(dir, Vector3.up);
+                //Vector3 dir = AnchorPoint(B) - AnchorPoint(A);
+                //LR.transform.rotation = Quaternion.LookRotation(dir, Vector3.up);
             }
         }
     }

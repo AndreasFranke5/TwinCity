@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2df4a538dac0c1e46bc2894080785995
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 176919
+  packageName: Line Texture Panning Shader
+  packageVersion: 1.0
+  assetPath: Assets/YAH/TexturePanningAsset/Materials/DemoMats/M_TEST_Pink.mat
+  uploadId: 385200
