@@ -33,8 +33,6 @@ Stockholm is an urban city that may face increasing risk or disaster due to clim
 ### Purpose
 Develop an interactive Mixed Reality (MR) tool that enables different teams to collaboratively visualize, analyze, and strategize flood mitigation by using historical and predictive data.
 
-##picture1
-
 ### 2.2. User Personas
 TwinCity serves diverse stakeholders with unique roles and technical requirements. Based on research and observations, we defined our users in several groups. However, we focused on urban planner and emergency response coordinator.
 
@@ -46,11 +44,18 @@ Urban Planner requires advanced tools for import/export city models in IFC/CityG
    </a>
    
 Emergency Response Coordinators have a responsibility to lead disaster simulations, allocate resources, and coordinate multi-agency efforts. The key needs of those people are real-time visualization of hazards (floods, fires) with 3D spatial context. Also, tools to place virtual markers (e.g., evacuation routes, resource depots) and Multi-user collaboration to direct field teams via shared annotations. However, the limitations of this group of people have siloed communication between police/fire/medical teams and static 2D maps lacking live data integration.
-##picture2
 
 ### 2.3.User Journey
-TwinCity is designed to support multi-role collaboration during urban planning and emergency response. Below are the key journeys for those users:
-##picture 3
+TwinCity is designed to support multi-role collaboration during urban planning and emergency response. Below are the key journeys for user planners:
+<div align="center">
+   <a href="http://github.com/AndreasFranke5/TwinCity">
+      <img src="Images/User journey.png" width="400">
+   </a>
+<div align="center">
+   <a href="http://github.com/AndreasFranke5/TwinCity">
+      <img src="Images/User journey1.png" width="400">
+   </a>
+Their journey begins with a guide from developer to introduce TwinCity's vision for sustainable energy.
 
 ### Storyboard
 
