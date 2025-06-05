@@ -25,7 +25,7 @@ Rapid urbanization and climate change are increasing the frequency and severity 
 
 Stockholm is an urban city that may face increasing risk or disaster due to climate change. The city's dense infrastructure and limited green spaces hinder effective water runoff, leading to potential damage to property, infrastructure, and public safety.
 
-<div align="center">
+<div>
    <a href="http://github.com/AndreasFranke5/TwinCity">
       <img src="Images/Problem statement and purpose.png" width="400">
    </a>
@@ -38,7 +38,7 @@ TwinCity serves diverse stakeholders with unique roles and technical requirement
 
 Urban Planner requires advanced tools for import/export city models in IFC/CityGML formats. To simulate long-term climate impacts (e.g., rising sea levels on infrastructure) and get API access to pull municipal GIS data (parcels, utility networks). However, urban planners are limited to manual conversion between 3D modeling tools and emergency systems and inability to stress-test designs against disaster scenarios.
 
-<div align="center">
+<div>
    <a href="http://github.com/AndreasFranke5/TwinCity">
       <img src="Images/Urban planner.png" width="400">
    </a>
@@ -48,7 +48,7 @@ Emergency Response Coordinators have a responsibility to lead disaster simulatio
 ### 2.3. User Journey
 TwinCity is designed to support multi-role collaboration during urban planning and emergency response. Below are the key journeys for user planners:
 
-<div align="center">
+<div>
    <a href="http://github.com/AndreasFranke5/TwinCity">
       <img src="Images/User journey.png" width="400">
    </a>
@@ -58,14 +58,14 @@ Pain points addressed in the Emergency Response Coordinators' journey are to rep
 
 ### 2.4. Storyboard
 
-<div align="center">
+<div>
    <a href="http://github.com/AndreasFranke5/TwinCity">
       <img src="Images/WhatsApp Image 2025-05-14 at 21.59.14.jpeg" width="400">
    </a>
 
 Our storyboard showed that our project journey began with role selection, view simulation, annotating zones, discussion, and export. In the design process, we also have drawn a sketch of our prototype. The purpose of this sketch is to help us to understand our development process better.
 
-<div align="center">
+<div>
    <a href="http://github.com/AndreasFranke5/TwinCity">
       <img src="Images/WhatsApp Image 2025-05-13 at 15.45.29.jpeg" width="400">
    </a>
