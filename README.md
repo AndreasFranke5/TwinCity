@@ -45,7 +45,7 @@ Urban Planner requires advanced tools for import/export city models in IFC/CityG
    
 Emergency Response Coordinators have a responsibility to lead disaster simulations, allocate resources, and coordinate multi-agency efforts. The key needs of those people are real-time visualization of hazards (floods, fires) with 3D spatial context. Also, tools to place virtual markers (e.g., evacuation routes, resource depots) and Multi-user collaboration to direct field teams via shared annotations. However, the limitations of this group of people have siloed communication between police/fire/medical teams and static 2D maps lacking live data integration.
 
-### 2.3.User Journey
+### 2.3. User Journey
 TwinCity is designed to support multi-role collaboration during urban planning and emergency response. Below are the key journeys for user planners:
 
 <div align="center">
@@ -56,7 +56,7 @@ TwinCity is designed to support multi-role collaboration during urban planning a
 Pain points addressed in the Emergency Response Coordinators' journey are to replace manual radio updates with synchronized virtual commands and eliminate guesswork in resource allocation. Meanwhile, the pain points addressed in the Urban planners' journey are to replace months of physical modeling with instant simulations and avoid costly construction errors.
 
 
-### Storyboard
+### 2.4. Storyboard
 
 <div align="center">
    <a href="http://github.com/AndreasFranke5/TwinCity">
@@ -70,9 +70,67 @@ Our storyboard showed that our project journey began with role selection, view s
       <img src="Images/WhatsApp Image 2025-05-13 at 15.45.29.jpeg" width="400">
    </a>
 
+### 2.5. Testing
+The TwinCity implementation followed an iterative testing protocol, with user experience validation embedded in each development cycle. The study assessed user control functionality by validating participants' capacity to execute system interactions and perceive corresponding changes in the virtual environment.
+
+The user interface was systematically evaluated through structured usability testing, incorporating both qualitative feedback and observational data to validate design effectiveness. This assessment confirmed that the interface met core usability requirements for intuitiveness and information clarity across user groups.
+
+Initial testing yielded significant behavioral insights that extended beyond basic functional validation. Participant feedback specifically identified opportunities to enhance user engagement through more dynamic interaction paradigms, and optimize information architecture for faster task completion.
+
 ## 3. System description
 
-Features and fuctionalities
+TwinCity is an advanced Mixed Reality (MR) Digital Twin platform that creates a real-time, interactive 3D replica of urban environments. Designed for emergency response, infrastructure planning, and climate adaptation, it bridges the physical and digital worlds by integrating real-time IoT sensor data (weather, traffic, structural health), high-fidelity 3D city models (photorealistic rendering).
+
+### 3.1. Features and fuctionalities
+1. Immersive Virtual Environment: Participants are immersed in a virtual world featuring a realistic 3D map. An develop guides users and provides informative narrations, explaining the concepts of our project and the project's functionalities.
+2. Collaborative Multi-User Experience: The virtual environment fosters collaboration. Multiple users can interact with each other in real-time, observing one another's actions and the impact of changes within the simulation.
+3. Interactive Control via Poke Gestures: Users can leverage intuitive poke gestures to control buttons within the virtual environment.
+
+### 3.2. Setting Up the Development Environment:
+This guide outlines the installation process for the TwinCity project, designed for users with basic knowledge of Unity,C# and verified Meta developer accounts.
+
+1.Software and Hardware Requirements:
+
+Software:
+
+Unity Hub (latest stable version recommended)
+Unity 6 (6000.1.2f1)
+Additional libraries for Unity (details provided in later steps)
+Meta developer account (verified)
+Meta Quest Link
+Meta Quest Developer Hub
+Photon account and App id for your application to be connected over network. This is mandatory so that multi-user experience is facilitated.
+
+Hardware:
+
+Computer with Unity6 installed (6000.1.2f1)
+Meta Quest VR headset ( Quest 3 or Quest 2 Pro)
+Additional hardware items mentioned below.
+
+2.Configuring the Development Environment:
+
+Configuring Meta Quest VR Headset:
+
+(Optional) If you could be the admin of the VR headset, things might get easier
+Follow the official Meta Quest setup guide to ensure your VR headset is properly connected and configured for development purposes with your verified Meta developer account.
+Create an Organization from this link and add the users who would use the project. Ensure that there should be atleast two users one being the host and the other being the client.
+
+Unity Project from GitHub:
+
+You will need the GitHub repository URL for the TwinCity project files.
+Open a web browser and navigate to the provided GitHub URL.
+Click the green "Code" button and then select "Download ZIP". This will download a compressed file containing the project files.
+Extract the downloaded ZIP file to a convenient location on your computer.
+Launch Unity from Unity Hub.
+In Unity, go to File > Open Project.
+Navigate to the extracted folder containing the TwinCity project files and select the project folder.
+Click "Open" to import the TwinCity project into Unity.
+Install Oculus Meta XR SDK from asset store, A NuGet Package Manager for Unity using github url and websocket-sharp libraries.
+Inside Unity, in the Toolbar, select “Oculus” → “Platform” → “Edit Settings”. Under “Application ID”→ “Meta Quest/3/Pro” paste the App ID, you just got from the Meta Quest Developer Website
+Inside Unity, Navigate to “Window” → “Photon Unity Networking” → “Highlight Server Settings”.In your “Project” tab you should see a file called “PhotonServerSettings” pop up, click it.Inside “PhotonServerSettings” → “App Id PUN”.
+
+3.Executing/Building the project:
+When everything is configured and connected, you can connect your headset to your computer through Meta quest link and then run the project in unity. User should be able to see the menu to select the sample and then create a room. If you want to test multi user experience, you need to Go to File > Build Settings and select 'Android' as the target platform. Click 'Switch Platform' to confirm. With your project configured, Click 'Build' and choose a name and location for the generated APK file.
 
 ## 4.Installation
 
@@ -83,48 +141,52 @@ Features and fuctionalities
 - **Photon Fusion** (Multiplayer Framework)
 - **Visual Studio Code + GitHub**
 
----
-
 ## 5.Usage section
 
-- ✅ 3D photorealistic Digital Twin city rendered in Unity  
-- ✅ Flood simulation using water plane or visual overlays  
-- ✅ MR interface with gesture-based navigation  
-- 🔄 Multiplayer interaction for emergency response roles  
-- 🔄 Visual indicators and alerts for dynamic events  
-- 🔄 Subscene placement and collision-aware environment
+Getting start with TwinCity: A Collaborative Mix Reality Experience allows you and other users to explore and interact with a virtal 3D map, buttons and lines in real time using Meta Quest VR headsets. Here's how to get started:
 
----
+1. Clean up and enter the virtal environment: Ensure both participants have their Meta Quest VR headsets on and are ready to enter the Immersive world.
+2. Join or creat a room: Using controller, navigate to the menu interface and select either "Creat Room (User A)" or "Join Room (User B)" depending on the user has role of host or visit.Typically, the "right index trigger" button on your controller will confirm your selection.
+3. Synchronize Your Experience (Spatial Alignment): Choose "Create New Anchor & Share It (User A)" or "Align to the Anchor (User B)" to ensure both users see the 3D map and environment in the same location.
+4. Listen to Guides: Developer will guide you through the functionalities within the environment.
+5. Interact with the features: Using different interaction to the features.
 
-## 6.How to Run
+## 6.References & Attributions
 
-> Requires Unity 6 LTS and Cesium for Unity setup.
+Code base:
 
-1. Clone the repo: ```git clone https://github.com/<your-username>/twincity.git```
-2. Open in **Unity 6**
-3. Sign in to your **Cesium account**
-4. Enter your **Google Maps API key** to load 3D tiles
-5. Enter Play Mode
+Unity-SharedSpatialAnchors - Boilerplate to start the development
+Mixed Reality:
 
----
+Passthrough - To facilitate Mixed reality experience
+Scene:
 
-## 👥 Contributors
+Scene API - To cater Mixed reality experience with a better understanding of surroundings
+Spatial Anchors:
+
+Oculus Spatial Anchors - Spatial Alignment for multi-user experience
+Networking:
+
+Photon - Networking for multi-user experience
+User Interface (UI):
+
+Assets:
+
+Unity Asset Store - TwinCity 3D Model
+
+Teachers:
+Charles Windlin
+Jordi Solsona Belenguer
+Jonas Collin
+
+Teaching Assistant:
+António Braga
+
+We'd like to give a big shout-out to our Teachers, António Braga. Their up-to-date knowledge of Unity, Spatial Anchors and related designing concepts was a huge help in getting this project off the ground. They were always willing to share their experience and insights, which made a big difference in our understanding and the overall success of the project.
+
+## Contributors
 
 - **Andreas** – Backend, Unity architecture, repo management  
 - **Eman** – UI/UX design, Figma mockups, portfolio materials
 - **Florian** – Lead Unity implementation, Cesium integration  
-- **Minhui** – Interaction design, XR developer, Testing
-
----
-
-## 📁 License
-
-This project is open source under the [MIT License](LICENSE).
-
----
-
-## 💡 Acknowledgments
-
-- Cesium for Unity: [https://cesium.com/unity](https://cesium.com/unity)  
-- Google Maps Photorealistic Tiles  
-- Original concept inspiration: [YouTube Video](https://www.youtube.com/watch?v=lLw5hCqSv5Y)
+- **Minhui** – Interaction design, XR developer, Testing, Interaction design
