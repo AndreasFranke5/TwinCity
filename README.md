@@ -53,6 +53,12 @@ TwinCity is designed to support multi-role collaboration during urban planning a
 ##picture 3
 
 ### Storyboard
+
+<div align="center">
+   <a href="http://github.com/AndreasFranke5/TwinCity">
+      <img src="Images/WhatsApp Image 2025-05-14 at 21.59.14.jpeg" width="400">
+   </a>
+
 ##picture 4
 
 Our project continues with a discussion of the existing organized ideas into different stages and corresponding modules. We divided our ideas into implementation, interactions, and testing parts. Finally, we will showcase the technical capabilities to a general audience in a video format.
