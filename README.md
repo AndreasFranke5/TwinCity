@@ -189,4 +189,4 @@ We'd like to give a big shout-out to our Teachers, António Braga. Their up-to-d
 - **Andreas** – Backend, Unity architecture, repo management  
 - **Eman** – UI/UX design, Figma mockups, portfolio materials
 - **Florian** – Lead Unity implementation, Cesium integration  
-- **Minhui** – Interaction design, XR developer, Testing, Interaction design
+- **Minhui** – Interaction design, XR developer, Testing
