@@ -2,7 +2,7 @@
 
 ** A simulation for Mixed Reality Digital Twin city! ** 
 
-We are four master students for an academic group project in the course *Design for Complex and Dynamic Contexts (DCDC)* at Stockholm University in Spring 2025. In this project, we develop a collaborative tool, the Mixed Reality Emergency Response application, with a 3D digital twin city displayed on a physical table. Our project aims to allow users to visualize a city and ongoing emergency scenarios in a 3D map, improving their understanding of spatial context. Our project also enables to use of hand tracking in MR to rotate, zoom, and pan the city model naturally, as one would with a physical model. Lastly, our project aims to support multiple co-located users to view and manipulate the same city model together in real-time. Shared Spatial Anchors (SSA) ensure all users see the model in the exact same physical location on the table, and networking (Photo Fusion) syncs their interactions. These solutions help to fill the gaps of ineffective cooperation on different teams.
+We are four master students for an academic group project in the course *Design for Complex and Dynamic Contexts (DCDC)* at Stockholm University in Spring 2025. In this project, we develop a collaborative tool, the Mixed Reality Emergency Response application, with a 3D digital twin city displayed on a physical table. Our project aims to allow users to visualize a city and ongoing emergency scenarios in a 3D map, improving their understanding of spatial context. Our project also enables to use of hand tracking in MR to rotate, zoom, and pan the city model naturally, as one would with a physical model. Lastly, our project aims to support multiple co-located users to view and manipulate the same city model together in real-time. Shared Spatial Anchors (SSA) ensure all users see the model in the exact same physical location on the table, and networking (Photo Fusion) syncs their interactions. These solutions help to fill the gaps of ineffective cooperation between different teams whenever a disaster occurs.
 
 # Logo poster
 
@@ -14,6 +14,27 @@ TwinCity creates a high-fidelity virtual replica of physical cities, enabling st
 
 ## 2.Design process
 
+TwinCity is a Mixed Reality (MR) project that utilizes digital twin technology to simulate water flood scenarios in Solna. The purpose of this project is to join multiple users to interact simultaneously and immersively. We began with brainstorming as the first step of the design process. In this step, we outline the project's scope, objectives, and potential challenges. Then, we defined our user interactions within the MR environment and tested various technologies to identify the most suitable tools for our implementation. All virtual environments in this project were developed by Unity 6, including modeling 3D maps and interactive maps, buttons, and lines. Collaborative features were implemented to allow multiple users to engage with the digital twin simultaneously. Subsequent user testing on demo day provided feedback on usability, functionality, and overall experience, which led to the identification and resolution of technical and usability issues. Refinements were made based on our user feedback and testing results. Finally, the project was compiled into a fully functional presentation, ready to be showcased to the intended audience.
+
+### 2.1. Brainstorming
+
+The brainstorming phase involved generated and refined the whole ideas for our project to establish the objectives, scope and potential challenges. At first, we defined our problem statement, user personas and user journey.
+
+### Problem statement
+Rapid urbanization and climate change are increasing the frequency and severity of urban disasters (floods, fires, power outages). Current emergency response systems rely on static 2D maps, siloed data, and slow manual coordination, leading to delayed decisions due to fragmented information and inefficient resource allocation. Today, existing tools fail to address the challenges that disasters bring in our lives, due to a lack of real-time 3D visualization, forcing responders to mentally translate 2D maps into physical spaces. In addition, operation in isolation with emergency teams, city planners, and utilities incompatible systems. Many tools depend on historical data, ignoring live IoT sensor input (e.g., weather, traffic, structural sensors), and also do not offer collaborative simulation, making it impossible to test strategies before implementation.
+
+Stockholm is an urban city that may face increasing risk or disaster due to climate change. The city's dense infrastructure and limited green spaces hinder effective water runoff, leading to potential damage to property, infrastructure, and public safety.
+
+### Purpose
+Develop an interactive Mixed Reality (MR) tool that enables different teams to collaboratively visualize, analyze, and strategize flood mitigation by using historical and predictive data.
+
+### 
+
+Our project continue with discuss the existed organized ideas into different stages and corresponding modules.  
+
+
+Finally, we will showcase the technical capabilities to a general audience in a video format.
+and present how different teams can work effectively, providing smart solutions for responders in the event of a disaster or emergency.
 ## 3. System description
 
 Features and fuctionalities
