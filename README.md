@@ -25,6 +25,11 @@ Rapid urbanization and climate change are increasing the frequency and severity 
 
 Stockholm is an urban city that may face increasing risk or disaster due to climate change. The city's dense infrastructure and limited green spaces hinder effective water runoff, leading to potential damage to property, infrastructure, and public safety.
 
+<div align="center">
+   <a href="http://github.com/AndreasFranke5/TwinCity">
+      <img src="Images/Problem statement and purpose.png" width="400">
+   </a>
+
 ### Purpose
 Develop an interactive Mixed Reality (MR) tool that enables different teams to collaboratively visualize, analyze, and strategize flood mitigation by using historical and predictive data.
 
