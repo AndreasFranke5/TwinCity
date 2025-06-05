@@ -63,9 +63,12 @@ Pain points addressed in the Emergency Response Coordinators' journey are to rep
       <img src="Images/WhatsApp Image 2025-05-14 at 21.59.14.jpeg" width="400">
    </a>
 
-##picture 4
+Our storyboard showed that our project journey began with role selection, view simulation, annotating zones, discussion, and export. In the design process, we also have drawn a sketch of our prototype. The purpose of this sketch is to help us to understand our development process better.
 
-Our project continues with a discussion of the existing organized ideas into different stages and corresponding modules. We divided our ideas into implementation, interactions, and testing parts. Finally, we will showcase the technical capabilities to a general audience in a video format.
+<div align="center">
+   <a href="http://github.com/AndreasFranke5/TwinCity">
+      <img src="Images/WhatsApp Image 2025-05-13 at 15.45.29.jpeg" width="400">
+   </a>
 
 ## 3. System description
 
