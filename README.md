@@ -47,10 +47,12 @@ Emergency Response Coordinators have a responsibility to lead disaster simulatio
 
 ### 2.3.User Journey
 TwinCity is designed to support multi-role collaboration during urban planning and emergency response. Below are the key journeys for user planners:
+
 <div align="center">
    <a href="http://github.com/AndreasFranke5/TwinCity">
       <img src="Images/User journey.png" width="400">
    </a>
+   
 Pain points addressed in the Emergency Response Coordinators' journey are to replace manual radio updates with synchronized virtual commands and eliminate guesswork in resource allocation. Meanwhile, the pain points addressed in the Urban planners' journey are to replace months of physical modeling with instant simulations and avoid costly construction errors.
 
 
