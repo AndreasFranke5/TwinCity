@@ -28,13 +28,26 @@ Stockholm is an urban city that may face increasing risk or disaster due to clim
 ### Purpose
 Develop an interactive Mixed Reality (MR) tool that enables different teams to collaboratively visualize, analyze, and strategize flood mitigation by using historical and predictive data.
 
-### 
+##picture1
 
-Our project continue with discuss the existed organized ideas into different stages and corresponding modules.  
+### 2.2. User Personas
+TwinCity serves diverse stakeholders with unique roles and technical requirements. Based on research and observations, we defined our users in several groups. However, we focused on urban planner and emergency response coordinator.
+
+Urban Planner requires advanced tools for import/export city models in IFC/CityGML formats. To simulate long-term climate impacts (e.g., rising sea levels on infrastructure) and get API access to pull municipal GIS data (parcels, utility networks). However, urban planners are limited to manual conversion between 3D modeling tools and emergency systems and inability to stress-test designs against disaster scenarios.
 
 
-Finally, we will showcase the technical capabilities to a general audience in a video format.
-and present how different teams can work effectively, providing smart solutions for responders in the event of a disaster or emergency.
+Emergency Response Coordinators have a responsibility to lead disaster simulations, allocate resources, and coordinate multi-agency efforts. The key needs of those people are real-time visualization of hazards (floods, fires) with 3D spatial context. Also, tools to place virtual markers (e.g., evacuation routes, resource depots) and Multi-user collaboration to direct field teams via shared annotations. However, the limitations of this group of people have siloed communication between police/fire/medical teams and static 2D maps lacking live data integration.
+##picture2
+
+### 2.3.User Journey
+TwinCity is designed to support multi-role collaboration during urban planning and emergency response. Below are the key journeys for those users:
+##picture 3
+
+### Storyboard
+##picture 4
+
+Our project continues with a discussion of the existing organized ideas into different stages and corresponding modules. We divided our ideas into implementation, interactions, and testing parts. Finally, we will showcase the technical capabilities to a general audience in a video format.
+
 ## 3. System description
 
 Features and fuctionalities
