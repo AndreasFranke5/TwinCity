@@ -51,11 +51,8 @@ TwinCity is designed to support multi-role collaboration during urban planning a
    <a href="http://github.com/AndreasFranke5/TwinCity">
       <img src="Images/User journey.png" width="400">
    </a>
-<div align="center">
-   <a href="http://github.com/AndreasFranke5/TwinCity">
-      <img src="Images/User journey1.png" width="400">
-   </a>
-Their journey begins with a guide from developer to introduce TwinCity's vision for sustainable energy.
+Pain points addressed in the Emergency Response Coordinators' journey are to replace manual radio updates with synchronized virtual commands and eliminate guesswork in resource allocation. Meanwhile, the pain points addressed in the Urban planners' journey are to replace months of physical modeling with instant simulations and avoid costly construction errors.
+
 
 ### Storyboard
 
