@@ -86,8 +86,8 @@ Visual representations and preliminary models are essential for project developm
 
 In our demo prototypes, we developed two buttons for generating the blue and red markers. Different markers have different meanings. For example, our picture here shows the red marker. This marker emphasizes our commitment to user safety in the prototype. By clearly labeling danger zones, we ensure:
 - Instant awareness of potential hazards.
-- ** Preventive action to avoid accidents during testing.
-- ** A user approach where safety is prioritized alongside innovation.
+- Preventive action to avoid accidents during testing.
+- A user approach where safety is prioritized alongside innovation.
 Because great prototypes protect their users while pushing boundaries.The marker picture highlights critical safety zones in the prototype, ensuring users operate within defined boundaries. Always adhere to marked warnings during testing. Also, this marker reminds us to flag risks early! If you spot unmarked hazards, tag them in issues. Safety is a shared responsibility. The red marker isn’t just decoration,it’s cue to pause and assess. 
 
 <div>
@@ -96,9 +96,9 @@ Because great prototypes protect their users while pushing boundaries.The marker
    </a>
 
 The lines in our prototype are critical for:
-- **Measuring exact distances between markers (e.g., safety zones, hazards).
-- **Simulating real-world scenarios, like evacuation routes or spatial planning.
-- **Enabling collaborative adjustments—teams can tweak paths and instantly gauge impact.
+- Measuring exact distances between markers (e.g., safety zones, hazards).
+- Simulating real-world scenarios, like evacuation routes or spatial planning.
+- Enabling collaborative adjustments—teams can tweak paths and instantly gauge impact.
 However, clear boundaries mean smarter decisions in the real world. This functionality achieved what we expected before and helped to simulate the situations.
 
 <div>
@@ -107,9 +107,9 @@ However, clear boundaries mean smarter decisions in the real world. This functio
    </a>
 
 The dynamic water-level simulation bridges virtual and physical worlds by:
-- **Accurately replicating flood scenarios with adjustable water levels (rising/falling).
-- **Enabling risk assessment, and testing infrastructure resilience or evacuation plans under realistic conditions.
-- **Providing instant visual feedback as variables change, empowering data-driven decisions.
+- Accurately replicating flood scenarios with adjustable water levels (rising/falling).
+- Enabling risk assessment, and testing infrastructure resilience or evacuation plans under realistic conditions.
+- Providing instant visual feedback as variables change, empowering data-driven decisions.
 In addition,simulate to mitigate before reality forces your hand. This work improves to ensure the feasibility and reliability of our system.
 
 ### 2.6. Testing
