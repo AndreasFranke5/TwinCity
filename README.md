@@ -8,7 +8,7 @@ We are four master students for an academic group project in the course *Design 
 
 <div>
    <a href="http://github.com/AndreasFranke5/TwinCity">
-      <img src="Images/Post.png" width="400">
+      <img src="Images/Post.jpeg" width="400">
    </a>
 
 ## 1.Introduction
