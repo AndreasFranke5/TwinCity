@@ -23,7 +23,7 @@ TwinCity is a Mixed Reality (MR) project that utilizes digital twin technology t
 
 ### 2.1. Brainstorming
 
-The brainstorming phase involved generated and refined the whole ideas for our project to establish the objectives, scope and potential challenges. At first, we defined our problem statement, user personas and user journey.
+The brainstorming phase involved generating and refining the whole idea for our project to establish the objectives, scope, and potential challenges. Initially, we defined our problem statement, user personas, and user journey. In the brainstorming steg, we discussed all potential problems by disasters and also planned our project process in detail. Meanwhile, we explained our problem statement, why our project is necessary for urban planners and designers to be effective in their work, and why our project helps them to simulate and understand situations. With the help of digital twin technology, our project aims to reduce resources and save energy.
 
 ### Problem statement
 Rapid urbanization and climate change are increasing the frequency and severity of urban disasters (floods, fires, power outages). Current emergency response systems rely on static 2D maps, siloed data, and slow manual coordination, leading to delayed decisions due to fragmented information and inefficient resource allocation. Today, existing tools fail to address the challenges that disasters bring in our lives, due to a lack of real-time 3D visualization, forcing responders to mentally translate 2D maps into physical spaces. In addition, operation in isolation with emergency teams, city planners, and utilities incompatible systems. Many tools depend on historical data, ignoring live IoT sensor input (e.g., weather, traffic, structural sensors), and also do not offer collaborative simulation, making it impossible to test strategies before implementation.
@@ -36,7 +36,7 @@ Stockholm is an urban city that may face increasing risk or disaster due to clim
    </a>
 
 ### Purpose
-Develop an interactive Mixed Reality (MR) tool that enables different teams to collaboratively visualize, analyze, and strategize flood mitigation by using historical and predictive data.
+Develop an interactive Mixed Reality (MR) tool that enables different teams to collaboratively visualize, analyze, and strategize flood mitigation by using historical and predictive data. Collaborate remotely wherever the users are, can maximize work efficiency and save energy. Also using real-time data to simulate and predict disaster situations helps to reduce resources.
 
 ### 2.2. User Personas
 TwinCity serves diverse stakeholders with unique roles and technical requirements. Based on research and observations, we defined our users in several groups. However, we focused on urban planner and emergency response coordinator.
