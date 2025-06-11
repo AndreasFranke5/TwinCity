@@ -6,6 +6,11 @@ We are four master students for an academic group project in the course *Design 
 
 # Logo poster
 
+<div>
+   <a href="http://github.com/AndreasFranke5/TwinCity">
+      <img src="Images/Post.png" width="400">
+   </a>
+
 ## 1.Introduction
 
 TwinCity is an experimental Mixed Reality (MR) platform that integrates Unity, Cesium for Unity, and Google Photorealistic 3D Tiles to create a real-time 3D digital twin of urban environments. Designed as a collaborative emergency response tool, it enables users to simulate disasters, analyze impacts, and coordinate interventions within a dynamic virtual replica of real-world locations. As climate change increasingly disrupts lives, effective cross-departmental coordination is crucial. Unlike traditional tools, TwinCity enhances situational awareness by allowing teams to explore, collaborate, and analyze data in an immersive 3D space. Users can work together seamlessly to address environmental challenges, gain real-time insights from disaster zones, and optimize response strategies, thereby improving decision-making and operational efficiency.
