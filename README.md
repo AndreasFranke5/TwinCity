@@ -87,13 +87,9 @@ Visual representations and preliminary models are essential for project developm
       <img src="Images/Marker.jpeg" width="400">
    </a>
 
-In our demo prototypes, we developed two buttons for generating the blue and red markers. Different markers have different meanings. For example, our picture here shows the red marker. This marker emphasizes our commitment to user safety in the prototype. By clearly labeling danger zones, we ensure:
+In our demo prototypes, we developed two buttons for generating the yellow and red markers. Different markers have different meanings. For example, our picture here shows the red marker. By clearly labeling danger zones, we ensure Instant awareness of potential hazards.
 
-- Instant awareness of potential hazards.
-- Preventive action to avoid accidents during testing.
-- A user approach where safety is prioritized alongside innovation.
-
-Because great prototypes protect their users while pushing boundaries.The marker picture highlights critical safety zones in the prototype, ensuring users operate within defined boundaries. Always adhere to marked warnings during testing. Also, this marker reminds us to flag risks early! If you spot unmarked hazards, tag them in issues. Safety is a shared responsibility. The red marker isn’t just decoration,it’s cue to pause and assess.
+The marker picture highlights critical safety zones in the prototype. Safety is a shared responsibility.
 
 <div>
    <a href="http://github.com/AndreasFranke5/TwinCity">
@@ -102,11 +98,11 @@ Because great prototypes protect their users while pushing boundaries.The marker
 
 The lines in our prototype are critical for:
 
-- Measuring exact distances between markers (e.g., safety zones, hazards).
-- Simulating real-world scenarios, like evacuation routes or spatial planning.
+- Measuring exact distances between markers (e.g., safety zones, hazards). (to be implemented)
+- Marking real-world scenarios, like evacuation routes or spatial planning.
 - Enabling collaborative adjustments—teams can tweak paths and instantly gauge impact.
 
-However, clear boundaries mean smarter decisions in the real world. This functionality achieved what we expected before and helped to simulate the situations.
+However, clear boundaries mean smarter decisions in the real world.
 
 <div>
    <a href="http://github.com/AndreasFranke5/TwinCity">
@@ -131,11 +127,11 @@ Initial testing yielded significant behavioral insights that extended beyond bas
 
 ## 3. System description
 
-TwinCity is an advanced Mixed Reality (MR) Digital Twin platform that creates a real-time, interactive 3D replica of urban environments. Designed for emergency response, infrastructure planning, and climate adaptation, it bridges the physical and digital worlds by integrating real-time IoT sensor data (weather, traffic, structural health), high-fidelity 3D city models (photorealistic rendering).
+TwinCity is an advanced Mixed Reality (MR) Digital Twin platform that creates a real-time, interactive 3D replica of urban environments. Designed for emergency response, infrastructure planning, and climate adaptation, it bridges the physical and digital worlds by integrating data with high-fidelity 3D city models (photorealistic rendering). Also it allows for the integration of IoT sensor data (weather, traffic, structural health) to further improve the data-driven decision-making.
 
 ### 3.1. Features and fuctionalities
 
-1. Immersive Virtual Environment: Participants are immersed in a virtual world featuring a realistic 3D map. An develop guides users and provides informative narrations, explaining the concepts of our project and the project's functionalities.
+1. Immersive Virtual Environment: Participants are presented with a realistic 3D map in a location of their choosing. The high-fidelity map allows for flood-simulations and marker functionalities enable the users to mark observations and thus improve collaboration.
 2. Collaborative Multi-User Experience: The virtual environment fosters collaboration. Multiple users can interact with each other in real-time, observing one another's actions and the impact of changes within the simulation.
 3. Interactive Control via Poke and Ray Gestures: Users can leverage intuitive poke and ray gestures to control buttons and the map within the virtual environment.
 
@@ -159,7 +155,6 @@ Hardware:
 
 Computer with Unity6 installed (6000.1.2f1)
 Meta Quest VR headset ( Quest 3 or Quest 2 Pro)
-Additional hardware items mentioned below.
 
 2.Configuring the Development Environment:
 
@@ -179,8 +174,8 @@ Launch Unity from Unity Hub.
 In Unity, go to File > Open Project.
 Navigate to the extracted folder containing the TwinCity project files and select the project folder.
 Click "Open" to import the TwinCity project into Unity.
-Install Oculus Meta XR SDK from asset store, A NuGet Package Manager for Unity using github url and websocket-sharp libraries.
-Inside Unity, in the Toolbar, select “Oculus” → “Platform” → “Edit Settings”. Under “Application ID”→ “Meta Quest/3/Pro” paste the App ID, you just got from the Meta Quest Developer Website
+Install Oculus Meta XR SDK from asset store.
+Inside Unity, in the Toolbar, select "Meta" → “Platform” → “Edit Settings”. Under “Application ID”→ “Meta Quest/3/Pro” paste the App ID, you just got from the Meta Quest Developer Website
 Inside Unity, Navigate to “Window” → “Photon Unity Networking” → “Highlight Server Settings”.In your “Project” tab you should see a file called “PhotonServerSettings” pop up, click it.Inside “PhotonServerSettings” → “App Id PUN”.
 
 3.Executing/Building the project:
@@ -190,7 +185,6 @@ When everything is configured and connected, you can connect your headset to you
 
 - **Unity 6 LTS**
 - **Cesium for Unity**
-- **Google Maps 3D Tiles API**
 - **Meta XR SDK** (Passthrough + Hand Tracking)
 - **Photon Fusion** (Multiplayer Framework)
 - **Visual Studio Code + GitHub**
@@ -199,11 +193,9 @@ When everything is configured and connected, you can connect your headset to you
 
 Getting start with TwinCity: A Collaborative Mix Reality Experience allows you and other users to explore and interact with a virtal 3D map, buttons and lines in real time using Meta Quest VR headsets. Here's how to get started:
 
-1. Clean up and enter the virtal environment: Ensure both participants have their Meta Quest VR headsets on and are ready to enter the Immersive world.
-2. Join or creat a room: Using controller, navigate to the menu interface and select either "Creat Room (User A)" or "Join Room (User B)" depending on the user has role of host or visit.Typically, the "right index trigger" button on your controller will confirm your selection.
-3. Synchronize Your Experience (Spatial Alignment): Choose "Create New Anchor & Share It (User A)" or "Align to the Anchor (User B)" to ensure both users see the 3D map and environment in the same location.
-4. Listen to Guides: Developer will guide you through the functionalities within the environment.
-5. Interact with the features: Using different interaction to the features.
+1. Ensure a free space in your physical environment and start the application: Ensure all participants have their Meta Quest VR headsets on and are ready to enter the Immersive world.
+2. Automatic Matchmaking will automatically connect you with other people in the same room.
+3. Interact with the features: Using different interaction to the features.
 
 ## 6.References & Attributions
 
@@ -221,12 +213,8 @@ Spatial Anchors:
 Oculus Spatial Anchors - Spatial Alignment for multi-user experience
 Networking:
 
-Photon - Networking for multi-user experience
+Photon Fusion - Networking for multi-user experience
 User Interface (UI):
-
-Assets:
-
-Unity Asset Store - TwinCity 3D Model
 
 Teachers:
 Charles Windlin
@@ -236,11 +224,9 @@ Jonas Collin
 Teaching Assistant:
 António Braga
 
-We'd like to give a big shout-out to our Teachers, António Braga. Their up-to-date knowledge of Unity, Spatial Anchors and related designing concepts was a huge help in getting this project off the ground. They were always willing to share their experience and insights, which made a big difference in our understanding and the overall success of the project.
-
 ## Contributors
 
-- **Andreas** – Backend, Unity architecture, repo management, Cesium integration
+- **Andreas** – Backend, repo management, Cesium integration
 - **Eman** – UI/UX design, Figma mockups, portfolio materials
 - **Florian** – Lead Unity implementation, Map interactions, Multiplayer integration
 - **Minhui** – Interaction design, XR developer, Testing
