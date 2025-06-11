@@ -1,8 +1,8 @@
 # TwinCity
 
-** A simulation for Mixed Reality Digital Twin city! ** 
+** A simulation for Mixed Reality Digital Twin city! **
 
-We are four master students for an academic group project in the course *Design for Complex and Dynamic Contexts (DCDC)* at Stockholm University in Spring 2025. In this project, we develop a collaborative tool, the Mixed Reality Emergency Response application, with a 3D digital twin city displayed on a physical table. Our project aims to allow users to visualize a city and ongoing emergency scenarios in a 3D map, improving their understanding of spatial context. Our project also enables to use of hand tracking in MR to rotate, zoom, and pan the city model naturally, as one would with a physical model. Lastly, our project aims to support multiple co-located users to view and manipulate the same city model together in real-time. Shared Spatial Anchors (SSA) ensure all users see the model in the exact same physical location on the table, and networking (Photo Fusion) syncs their interactions. These solutions help to fill the gaps of ineffective cooperation between different teams whenever a disaster occurs.
+We are four master students for an academic group project in the course _Design for Complex and Dynamic Contexts (DCDC)_ at Stockholm University in Spring 2025. In this project, we develop a collaborative tool, the Mixed Reality Emergency Response application, with a 3D digital twin city displayed on a physical table. Our project aims to allow users to visualize a city and ongoing emergency scenarios in a 3D map, improving their understanding of spatial context. Our project also enables to use of hand tracking in MR to rotate, zoom, and pan the city model naturally, as one would with a physical model. Lastly, our project aims to support multiple co-located users to view and manipulate the same city model together in real-time. Shared Spatial Anchors (SSA) ensure all users see the model in the exact same physical location on the table, and networking (Photo Fusion) syncs their interactions. These solutions help to fill the gaps of ineffective cooperation between different teams whenever a disaster occurs.
 
 # Logo poster
 
@@ -26,6 +26,7 @@ TwinCity is a Mixed Reality (MR) project that utilizes digital twin technology t
 The brainstorming phase involved generating and refining the whole idea for our project to establish the objectives, scope, and potential challenges. Initially, we defined our problem statement, user personas, and user journey. In the brainstorming steg, we discussed all potential problems by disasters and also planned our project process in detail. Meanwhile, we explained our problem statement, why our project is necessary for urban planners and designers to be effective in their work, and why our project helps them to simulate and understand situations. With the help of digital twin technology, our project aims to reduce resources and save energy.
 
 ### Problem statement
+
 Rapid urbanization and climate change are increasing the frequency and severity of urban disasters (floods, fires, power outages). Current emergency response systems rely on static 2D maps, siloed data, and slow manual coordination, leading to delayed decisions due to fragmented information and inefficient resource allocation. Today, existing tools fail to address the challenges that disasters bring in our lives, due to a lack of real-time 3D visualization, forcing responders to mentally translate 2D maps into physical spaces. In addition, operation in isolation with emergency teams, city planners, and utilities incompatible systems. Many tools depend on historical data, ignoring live IoT sensor input (e.g., weather, traffic, structural sensors), and also do not offer collaborative simulation, making it impossible to test strategies before implementation.
 
 Stockholm is an urban city that may face increasing risk or disaster due to climate change. The city's dense infrastructure and limited green spaces hinder effective water runoff, leading to potential damage to property, infrastructure, and public safety.
@@ -36,9 +37,11 @@ Stockholm is an urban city that may face increasing risk or disaster due to clim
    </a>
 
 ### Purpose
+
 Develop an interactive Mixed Reality (MR) tool that enables different teams to collaboratively visualize, analyze, and strategize flood mitigation by using historical and predictive data. Collaborate remotely wherever the users are, can maximize work efficiency and save energy. Also using real-time data to simulate and predict disaster situations helps to reduce resources.
 
 ### 2.2. User Personas
+
 TwinCity serves diverse stakeholders with unique roles and technical requirements. Based on research and observations, we defined our users in several groups. However, we focused on urban planner and emergency response coordinator.
 
 Urban Planner requires advanced tools for import/export city models in IFC/CityGML formats. To simulate long-term climate impacts (e.g., rising sea levels on infrastructure) and get API access to pull municipal GIS data (parcels, utility networks). However, urban planners are limited to manual conversion between 3D modeling tools and emergency systems and inability to stress-test designs against disaster scenarios.
@@ -51,6 +54,7 @@ Urban Planner requires advanced tools for import/export city models in IFC/CityG
 Emergency Response Coordinators have a responsibility to lead disaster simulations, allocate resources, and coordinate multi-agency efforts. The key needs of those people are real-time visualization of hazards (floods, fires) with 3D spatial context. Also, tools to place virtual markers (e.g., evacuation routes, resource depots) and Multi-user collaboration to direct field teams via shared annotations. However, the limitations of this group of people have siloed communication between police/fire/medical teams and static 2D maps lacking live data integration.
 
 ### 2.3. User Journey
+
 TwinCity is designed to support multi-role collaboration during urban planning and emergency response. Below are the key journeys for user planners:
 
 <div>
@@ -59,7 +63,6 @@ TwinCity is designed to support multi-role collaboration during urban planning a
    </a>
    
 Pain points addressed in the Emergency Response Coordinators' journey are to replace manual radio updates with synchronized virtual commands and eliminate guesswork in resource allocation. Meanwhile, the pain points addressed in the Urban planners' journey are to replace months of physical modeling with instant simulations and avoid costly construction errors.
-
 
 ### 2.4. Storyboard
 
@@ -85,11 +88,12 @@ Visual representations and preliminary models are essential for project developm
    </a>
 
 In our demo prototypes, we developed two buttons for generating the blue and red markers. Different markers have different meanings. For example, our picture here shows the red marker. This marker emphasizes our commitment to user safety in the prototype. By clearly labeling danger zones, we ensure:
+
 - Instant awareness of potential hazards.
 - Preventive action to avoid accidents during testing.
 - A user approach where safety is prioritized alongside innovation.
-  
-Because great prototypes protect their users while pushing boundaries.The marker picture highlights critical safety zones in the prototype, ensuring users operate within defined boundaries. Always adhere to marked warnings during testing. Also, this marker reminds us to flag risks early! If you spot unmarked hazards, tag them in issues. Safety is a shared responsibility. The red marker isn’t just decoration,it’s cue to pause and assess. 
+
+Because great prototypes protect their users while pushing boundaries.The marker picture highlights critical safety zones in the prototype, ensuring users operate within defined boundaries. Always adhere to marked warnings during testing. Also, this marker reminds us to flag risks early! If you spot unmarked hazards, tag them in issues. Safety is a shared responsibility. The red marker isn’t just decoration,it’s cue to pause and assess.
 
 <div>
    <a href="http://github.com/AndreasFranke5/TwinCity">
@@ -97,10 +101,11 @@ Because great prototypes protect their users while pushing boundaries.The marker
    </a>
 
 The lines in our prototype are critical for:
+
 - Measuring exact distances between markers (e.g., safety zones, hazards).
 - Simulating real-world scenarios, like evacuation routes or spatial planning.
 - Enabling collaborative adjustments—teams can tweak paths and instantly gauge impact.
-  
+
 However, clear boundaries mean smarter decisions in the real world. This functionality achieved what we expected before and helped to simulate the situations.
 
 <div>
@@ -109,6 +114,7 @@ However, clear boundaries mean smarter decisions in the real world. This functio
    </a>
 
 The dynamic water-level simulation bridges virtual and physical worlds by:
+
 - Accurately replicating flood scenarios with adjustable water levels (rising/falling).
 - Enabling risk assessment, and testing infrastructure resilience or evacuation plans under realistic conditions.
 - Providing instant visual feedback as variables change, empowering data-driven decisions.
@@ -116,6 +122,7 @@ The dynamic water-level simulation bridges virtual and physical worlds by:
 In addition,simulate to mitigate before reality forces your hand. This work improves to ensure the feasibility and reliability of our system.
 
 ### 2.6. Testing
+
 The TwinCity implementation followed an iterative testing protocol, with user experience validation embedded in each development cycle. The study assessed user control functionality by validating participants' capacity to execute system interactions and perceive corresponding changes in the virtual environment.
 
 The user interface was systematically evaluated through structured usability testing, incorporating both qualitative feedback and observational data to validate design effectiveness. This assessment confirmed that the interface met core usability requirements for intuitiveness and information clarity across user groups.
@@ -127,11 +134,13 @@ Initial testing yielded significant behavioral insights that extended beyond bas
 TwinCity is an advanced Mixed Reality (MR) Digital Twin platform that creates a real-time, interactive 3D replica of urban environments. Designed for emergency response, infrastructure planning, and climate adaptation, it bridges the physical and digital worlds by integrating real-time IoT sensor data (weather, traffic, structural health), high-fidelity 3D city models (photorealistic rendering).
 
 ### 3.1. Features and fuctionalities
+
 1. Immersive Virtual Environment: Participants are immersed in a virtual world featuring a realistic 3D map. An develop guides users and provides informative narrations, explaining the concepts of our project and the project's functionalities.
 2. Collaborative Multi-User Experience: The virtual environment fosters collaboration. Multiple users can interact with each other in real-time, observing one another's actions and the impact of changes within the simulation.
-3. Interactive Control via Poke Gestures: Users can leverage intuitive poke gestures to control buttons within the virtual environment.
+3. Interactive Control via Poke and Ray Gestures: Users can leverage intuitive poke and ray gestures to control buttons and the map within the virtual environment.
 
 ### 3.2. Setting Up the Development Environment:
+
 This guide outlines the installation process for the TwinCity project, designed for users with basic knowledge of Unity,C# and verified Meta developer accounts.
 
 1.Software and Hardware Requirements:
@@ -231,7 +240,7 @@ We'd like to give a big shout-out to our Teachers, António Braga. Their up-to-d
 
 ## Contributors
 
-- **Andreas** – Backend, Unity architecture, repo management  
+- **Andreas** – Backend, Unity architecture, repo management, Cesium integration
 - **Eman** – UI/UX design, Figma mockups, portfolio materials
-- **Florian** – Lead Unity implementation, Cesium integration  
+- **Florian** – Lead Unity implementation, Map interactions, Multiplayer integration
 - **Minhui** – Interaction design, XR developer, Testing
