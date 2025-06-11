@@ -77,22 +77,40 @@ Our storyboard showed that our project journey began with role selection, view s
 
 ### 2.5. Prototypes
 
+Visual representations and preliminary models are essential for project development. The project experience is in a mixed reality (MR) environment where users can interect with both virtual and physical worlds. Birtual models replicate real-world objects, ensuring fluid interaction. The experience is also multi-user, permitting participants to visualize, alter configurations, and observe others' changes in real-time.
+
 <div>
    <a href="http://github.com/AndreasFranke5/TwinCity">
       <img src="Images/Marker.jpeg" width="400">
    </a>
 
+In our demo prototypes, we developed two buttons for generating the blue and red markers. Different markers have different meanings. For example, our picture here shows the red marker. This marker emphasizes our commitment to user safety in the prototype. By clearly labeling danger zones, we ensure:
+Instant awareness of potential hazards.
+Preventive action to avoid accidents during testing.
+A user approach where safety is prioritized alongside innovation.
+Because great prototypes protect their users while pushing boundaries.
+The marker picture highlights critical safety zones in the prototype, ensuring users operate within defined boundaries. Always adhere to marked warnings during testing. Also, this marker reminds us to flag risks early! If you spot unmarked hazards, tag them in issues. Safety is a shared responsibility. The red marker isn’t just decoration,it’s cue to pause and assess. 
 
 <div>
    <a href="http://github.com/AndreasFranke5/TwinCity">
       <img src="Images/Line.jpeg" width="400">
    </a>
 
+The lines in our prototype are critical for:
+Measuring exact distances between markers (e.g., safety zones, hazards).
+Simulating real-world scenarios, like evacuation routes or spatial planning.
+Enabling collaborative adjustments—teams can tweak paths and instantly gauge impact. However,
+clear boundaries mean smarter decisions in the real world.
 
 <div>
    <a href="http://github.com/AndreasFranke5/TwinCity">
       <img src="Images/Simulatewaterlevel.jpeg" width="400">
    </a>
+
+The dynamic water-level simulation bridges virtual and physical worlds by:
+Accurately replicating flood scenarios with adjustable water levels (rising/falling).
+Enabling risk assessment, and testing infrastructure resilience or evacuation plans under realistic conditions.
+Providing instant visual feedback as variables change, empowering data-driven decisions. In addition,simulate to mitigate before reality forces your hand.
    
 ### 2.6. Testing
 The TwinCity implementation followed an iterative testing protocol, with user experience validation embedded in each development cycle. The study assessed user control functionality by validating participants' capacity to execute system interactions and perceive corresponding changes in the virtual environment.
