@@ -197,7 +197,7 @@ Install Oculus Meta XR SDK from asset store.
 Inside Unity, in the Toolbar, select "Meta" → “Platform” → “Edit Settings”. Under “Application ID”→ “Meta Quest/3/Pro” paste the App ID, you just got from the Meta Quest Developer Website
 Inside Unity, Navigate to “Window” → “Photon Unity Networking” → “Highlight Server Settings”.In your “Project” tab you should see a file called “PhotonServerSettings” pop up, click it.Inside “PhotonServerSettings” → “App Id PUN”.
 
-3.Executing/Building the project:
+3. Executing/Building the project:
 When everything is configured and connected, you can connect your headset to your computer through Meta quest link and then run the project in unity. User should be able to see the menu to select the sample and then create a room. If you want to test multi user experience, you need to Go to File > Build Settings and select 'Android' as the target platform. Click 'Switch Platform' to confirm. With your project configured, Click 'Build' and choose a name and location for the generated APK file.
 
 ## 4. Installation
