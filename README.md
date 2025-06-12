@@ -1,8 +1,10 @@
 # TwinCity
 
-** A simulation for Mixed Reality Digital Twin city! **
+**A Collaborative Mixed Reality Digital Twin Platform**
 
-We are four master students for an academic group project in the course _Design for Complex and Dynamic Contexts (DCDC)_ at Stockholm University in Spring 2025. In this project, we develop a collaborative tool, the Mixed Reality Emergency Response application, with a 3D digital twin city displayed on a physical table. Our project aims to allow users to visualize a city and ongoing emergency scenarios in a 3D map, improving their understanding of spatial context. Our project also enables to use of hand tracking in MR to rotate, zoom, and pan the city model naturally, as one would with a physical model. Lastly, our project aims to support multiple co-located users to view and manipulate the same city model together in real-time. Shared Spatial Anchors (SSA) ensure all users see the model in the exact same physical location on the table, and networking (Photo Fusion) syncs their interactions. These solutions help to fill the gaps of ineffective cooperation between different teams whenever a disaster occurs.
+TwinCity is a Mixed Reality simulation platform built by four master's students as part of the course *Design for Complex and Dynamic Contexts (DCDC)* at Stockholm University in Spring 2025. The goal was to develop a collaborative emergency response tool using a 3D digital twin city placed on a physical table, enabling intuitive and real-time spatial planning.
+
+Users can rotate, annotate, and explore a photorealistic 3D map using hand gestures via Meta Quest headsets. Multi-user collaboration is supported through Shared Spatial Anchors (SSA) and Photon Fusion networking, allowing synchronized interaction from multiple devices in the same physical space.
 
 # Logo poster
 
@@ -11,19 +13,36 @@ We are four master students for an academic group project in the course _Design 
       <img src="Images/Post.jpeg" width="400">
    </a>
 
-## 1.Introduction
+## 1. Introduction
 
-TwinCity is an experimental Mixed Reality (MR) platform that integrates Unity, Cesium for Unity, and Google Photorealistic 3D Tiles to create a real-time 3D digital twin of urban environments. Designed as a collaborative emergency response tool, it enables users to simulate disasters, analyze impacts, and coordinate interventions within a dynamic virtual replica of real-world locations. As climate change increasingly disrupts lives, effective cross-departmental coordination is crucial. Unlike traditional tools, TwinCity enhances situational awareness by allowing teams to explore, collaborate, and analyze data in an immersive 3D space. Users can work together seamlessly to address environmental challenges, gain real-time insights from disaster zones, and optimize response strategies, thereby improving decision-making and operational efficiency.
+TwinCity integrates Unity, Cesium for Unity, and Google Photorealistic 3D Tiles to create an interactive digital twin of Stockholm. Designed as a simulation platform for emergency planning and cross-department collaboration, it helps users simulate disasters (e.g. flooding), assess infrastructure impact, and coordinate interventions in a shared 3D space.
 
-TwinCity creates a high-fidelity virtual replica of physical cities, enabling stakeholders to visualize, analyze, and interact with geospatial data in an immersive 3D environment. The platform serves as a collaborative decision-support system for government agencies, disaster response teams, and urban planners. By integrating real-time IoT sensor data, environmental simulations, and multi-user interaction, TwinCity facilitates disaster preparedness & response in simulating floods, fires, and other emergencies in a risk-free virtual space. Climate Adaptation planning in modeling the impact of extreme weather events on urban infrastructure. Cross-departmental coordination in enabling real-time collaboration among emergency services, utilities, and policymakers.
+Unlike traditional 2D maps or isolated systems, TwinCity offers:
+- Natural MR interaction with the map
+- Real-time annotations and markers
+- Multi-user co-location via SSA
+- Simulation of dynamic elements such as rising water levels
 
-## 2.Design process
+This enables faster, more informed decision-making in critical scenarios like climate adaptation planning and disaster response.
 
-TwinCity is a Mixed Reality (MR) project that utilizes digital twin technology to simulate water flood scenarios in Solna. The purpose of this project is to join multiple users to interact simultaneously and immersively. We began with brainstorming as the first step of the design process. In this step, we outline the project's scope, objectives, and potential challenges. Then, we defined our user interactions within the MR environment and tested various technologies to identify the most suitable tools for our implementation. All virtual environments in this project were developed by Unity 6, including modeling 3D maps and interactive maps, buttons, and lines. Collaborative features were implemented to allow multiple users to engage with the digital twin simultaneously. Subsequent user testing on demo day provided feedback on usability, functionality, and overall experience, which led to the identification and resolution of technical and usability issues. Refinements were made based on our user feedback and testing results. Finally, the project was compiled into a fully functional presentation, ready to be showcased to the intended audience.
+## 2. Design Process
+
+The project followed an iterative process based on Design Thinking:
+
+- **Brainstorming**  
+  Defined our problem space, user roles, pain points, and technical scope.
+  
+- **Prototyping**  
+  Built in Unity 6 with Cesium 3D Tiles for photorealistic city rendering. UI, markers, and map controls implemented using Meta XR SDK.
+
+- **Testing & Feedback**  
+  Tested multi-user flow, interaction precision, and gesture clarity on Meta Quest 2 & 3. Iterated based on user feedback.
+
+---
 
 ### 2.1. Brainstorming
 
-The brainstorming phase involved generating and refining the whole idea for our project to establish the objectives, scope, and potential challenges. Initially, we defined our problem statement, user personas, and user journey. In the brainstorming steg, we discussed all potential problems by disasters and also planned our project process in detail. Meanwhile, we explained our problem statement, why our project is necessary for urban planners and designers to be effective in their work, and why our project helps them to simulate and understand situations. With the help of digital twin technology, our project aims to reduce resources and save energy.
+The brainstorming phase involved generating and refining the whole idea for our project to establish the objectives, scope, and potential challenges. Initially, we defined our problem statement, user personas, and user journey. In the brainstorming stage, we discussed all potential problems by disasters and also planned our project process in detail. Meanwhile, we explained our problem statement, why our project is necessary for urban planners and designers to be effective in their work, and why our project helps them to simulate and understand situations. With the help of digital twin technology, our project aims to reduce resources and save energy.
 
 ### Problem statement
 
@@ -139,7 +158,7 @@ TwinCity is an advanced Mixed Reality (MR) Digital Twin platform that creates a 
 
 This guide outlines the installation process for the TwinCity project, designed for users with basic knowledge of Unity,C# and verified Meta developer accounts.
 
-1.Software and Hardware Requirements:
+1. Software and Hardware Requirements:
 
 Software:
 
@@ -153,10 +172,10 @@ Photon account and App id for your application to be connected over network. Thi
 
 Hardware:
 
-Computer with Unity6 installed (6000.1.2f1)
-Meta Quest VR headset ( Quest 3 or Quest 2 Pro)
+Computer with Unity 6 installed (6000.1.2f1)
+Meta Quest VR headset (Quest 3 or Quest 2 Pro)
 
-2.Configuring the Development Environment:
+2. Configuring the Development Environment:
 
 Configuring Meta Quest VR Headset:
 
@@ -181,7 +200,7 @@ Inside Unity, Navigate to “Window” → “Photon Unity Networking” → “
 3.Executing/Building the project:
 When everything is configured and connected, you can connect your headset to your computer through Meta quest link and then run the project in unity. User should be able to see the menu to select the sample and then create a room. If you want to test multi user experience, you need to Go to File > Build Settings and select 'Android' as the target platform. Click 'Switch Platform' to confirm. With your project configured, Click 'Build' and choose a name and location for the generated APK file.
 
-## 4.Installation
+## 4. Installation
 
 - **Unity 6**
 - **BuildingBlock**
@@ -189,15 +208,15 @@ When everything is configured and connected, you can connect your headset to you
 - **CesiumSettings**
 - **Visual Studio Code + GitHub**
 
-## 5.Usage section
+## 5. Usage section
 
-Getting start with TwinCity: A Collaborative Mix Reality Experience allows you and other users to explore and interact with a virtal 3D map, buttons and lines in real time using Meta Quest VR headsets. Here's how to get started:
+Getting started with TwinCity: A Collaborative Mixed Reality Experience allows you and other users to explore and interact with a virtal 3D map, buttons and lines in real time using Meta Quest VR headsets. Here's how to get started:
 
 1. Ensure a free space in your physical environment and start the application: Ensure all participants have their Meta Quest VR headsets on and are ready to enter the Immersive world.
 2. Automatic Matchmaking will automatically connect you with other people in the same room.
 3. Interact with the features: Using different interaction to the features.
 
-## 6.References & Attributions
+## 6. References & Attributions
 
 Code base:
 
@@ -226,7 +245,7 @@ António Braga
 
 ## Contributors
 
-- **Andreas** – Backend, repo management, Cesium integration
-- **Eman** – UI/UX design, Figma mockups, portfolio materials
-- **Florian** – Lead Unity implementation, Map interactions, Multiplayer integration
-- **Minhui** – Interaction design, XR developer, Testing
+- **Andreas**
+- **Eman**
+- **Florian**
+- **Minhui**
