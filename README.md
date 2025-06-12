@@ -183,10 +183,10 @@ When everything is configured and connected, you can connect your headset to you
 
 ## 4.Installation
 
-- **Unity 6 LTS**
-- **Cesium for Unity**
-- **Meta XR SDK** (Passthrough + Hand Tracking)
-- **Photon Fusion** (Multiplayer Framework)
+- **Unity 6**
+- **BuildingBlock**
+- **Meta XR SDK** 
+- **CesiumSettings**
 - **Visual Studio Code + GitHub**
 
 ## 5.Usage section
