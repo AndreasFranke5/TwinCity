@@ -197,24 +197,13 @@ Install Oculus Meta XR SDK from asset store.
 Inside Unity, in the Toolbar, select "Meta" → “Platform” → “Edit Settings”. Under “Application ID”→ “Meta Quest/3/Pro” paste the App ID, you just got from the Meta Quest Developer Website
 Inside Unity, Navigate to “Window” → “Photon Unity Networking” → “Highlight Server Settings”.In your “Project” tab you should see a file called “PhotonServerSettings” pop up, click it.Inside “PhotonServerSettings” → “App Id PUN”.
 
-3. Executing/Building the project:
-When everything is configured and connected, you can connect your headset to your computer through Meta quest link and then run the project in unity. User should be able to see the menu to select the sample and then create a room. If you want to test multi user experience, you need to Go to File > Build Settings and select 'Android' as the target platform. Click 'Switch Platform' to confirm. With your project configured, Click 'Build' and choose a name and location for the generated APK file.
+## 4. Usage
 
-## 4. Installation
-
-- **Unity 6**
-- **BuildingBlock**
-- **Meta XR SDK** 
-- **CesiumSettings**
-- **Visual Studio Code + GitHub**
-
-## 5. Usage section
-
-Getting started with TwinCity: A Collaborative Mixed Reality Experience allows you and other users to explore and interact with a virtal 3D map, buttons and lines in real time using Meta Quest VR headsets. Here's how to get started:
-
-1. Ensure a free space in your physical environment and start the application: Ensure all participants have their Meta Quest VR headsets on and are ready to enter the Immersive world.
-2. Automatic Matchmaking will automatically connect you with other people in the same room.
-3. Interact with the features: Using different interaction to the features.
+1. **Start the app on your Meta Quest 2 or 3** and place the map on a table.
+2. **Use hand gestures** to rotate and reposition the 3D map.
+3. **Adjust water levels** using buttons to simulate flooding.
+4. **Place markers** (red/yellow/line) to annotate the map.
+5. **Collaborate in real time** with another player in the same room using Photon networking and Shared Spatial Anchors.
 
 ## 6. References & Attributions
 
@@ -245,7 +234,15 @@ António Braga
 
 ## Contributors
 
-- **Andreas**
-- **Eman**
-- **Florian**
-- **Minhui**
+- **Andreas** – Data Engineer  
+  Cesium integration, line marker tool, project management, GitHub, Drive, group chat
+
+- **Eman** – Interaction Designer  
+  Figma planning, UI/UX, poster design, final portfolio video
+
+- **Florian** – Development Lead  
+  Full Unity implementation, multiplayer networking, debugging, testing on Quest 3, optimizations
+
+- **Minhui** – Interaction Designer  
+  Red/yellow marker logic, README edits, communication and coordination
+
